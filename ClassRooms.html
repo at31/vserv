@@ -1,0 +1,1183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+    <base href="https://www.vsopen.ru/app/" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <title>VSopen.ru :: Виртуальная школа</title>
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/css/iestyle.css?77" />
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/css/style.css?77"/>
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/css/pretty_table.css?77"/>
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/css/smartpaginator.css?77"/>
+    <link rel="stylesheet" type="text/css" href="client/css/system/preloader.css?77"/>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+
+    <!-- jquery -->
+    <script type="text/javascript" src="client/ru/vsopen/system/js/jquery-ui/js/jquery.min.js?77"></script>
+    <script type="text/javascript" src="client/ru/vsopen/system/js/jquery-ui/js/jquery-ui.min.js?77"></script>
+    <link rel="stylesheet" href="client/ru/vsopen/system/js/jquery-ui/css/jquery-ui.min.css?77"/>
+    <script type="text/javascript" src="client/ru/vsopen/system/js/globalvsopen.js?77"></script>
+    <script type="text/javascript" src="client/ru/vsopen/system/js/jquery-redirect/jquery.redirect.js?77"></script>
+    <script type="text/javascript" src="client/js/system/preloader.js?77"></script>
+
+    <!-- underscore -->
+    <script type="text/javascript" src="client/js/lib/underscore-min.js?77"></script>
+
+    <!-- qtip tooltip-->
+    <script type="text/javascript" src="client/ru/vsopen/system/js/qtip/jquery.qtip.js?77"></script>
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/js/qtip/jquery.qtip.css?77"/>
+
+    <!-- chosen -->
+    <script src="client/ru/vsopen/system/js/chosen/chosen.jquery.min.js?77" type="text/javascript"></script>
+    <script src="client/ru/vsopen/system/js/chosen/chosen.proto.min.js?77" type="text/javascript"></script>
+    <link rel="stylesheet" href="client/ru/vsopen/system/js/chosen/chosen.min.css?77"/>
+
+    <!--workAreaSelector-->
+    <link rel="stylesheet" href="client/ru/vsopen/common/workareas/css/main.css?77"/>
+    <link rel="stylesheet" href="client/ru/vsopen/common/workareas/css/cssf-base.css?77"/>
+    <script type="text/javascript" src="client/ru/vsopen/common/workareas/js/workAreaSelector.js?77"></script>
+
+    <link type="text/css" rel="Stylesheet" href="client/ru/vsopen/system/css/ie6FixSelect.css?77"/>
+</head>
+<body>
+    <iframe class="iframe-layer"></iframe>
+    <div id="main_header"></div>
+    <div id="main">
+        <div id="left">
+    <div id="wxm" class="widget normal menu" style="width: 80px; border: 1px solid lightgray;">
+        <div id="wxm_module" class="menu"></div>
+        <div class="header">
+            <div class="borders">
+                <div class="nw"></div>
+                <div class="ne"></div>
+            </div>
+            <div class="widget_header">
+            </div>
+            <div class="buttons">
+
+            </div>
+        </div>
+        <div class="content">
+            <div class="borders">
+                <div class="w"></div>
+                <div class="e"></div>
+            </div>
+            <div>
+                <img id="wxm_loader" src="images/ajax-loader.gif" alt="Загрузка"
+                     style="position:absolute; z-index:10; display:none;"/>
+                <img id="wxm_divloader" src="images/back1.png"
+                     style="position:absolute; z-index:20; display:none;"/>
+            </div>
+
+
+<link rel="stylesheet" type="text/css" href="client/ru/vsopen/base/menu/css/style.css?77"/>
+
+<div class="left_menu">
+        <a href="add/schedulingLesson" onClick="oneExec(this);" title="Учебное расписание" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/scheduling/schedulingLesson/images/icon.gif" alt="Учебное расписание"/>
+        </a>
+        <a href="add/eduplans" onClick="oneExec(this);" title="Учебные планы" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/eduplans/images/icon.gif" alt="Учебные планы"/>
+        </a>
+</div>
+<div class="left_menu">
+        <a href="add/thematicplans" onClick="oneExec(this);" title="Тематическое планирование" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/thematicplans/images/icon.gif" alt="Тематическое планирование"/>
+        </a>
+</div>
+<div class="left_menu">
+        <a href="add/messaging" onClick="oneExec(this);" title="Внутренняя почта" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/common/service/messaging/images/icon.gif" alt="Внутренняя почта"/>
+        </a>
+</div>
+<div class="left_menu">
+        <a href="add/studentDiary" onClick="oneExec(this);" title="Дневник" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/xreports/studentDiary/images/icon.gif" alt="Дневник"/>
+        </a>
+        <a href="add/studentportfolio" onClick="oneExec(this);" title="Портфолио ученика" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/students/portfolio/images/icon.gif" alt="Портфолио ученика"/>
+        </a>
+        <a href="add/studentReport" onClick="oneExec(this);" title="Табель успеваемости" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/xreports/studentReport/images/icon.gif" alt="Табель успеваемости"/>
+        </a>
+</div>
+        </div>
+        <div class="footer">
+<div class="borders">
+    <div class="sw"></div>
+    <div class="se"></div>
+    <div class="s"></div>
+</div>
+<!--в данных инпутах содержится информация для подтверждений-->
+<input value="menu" type="hidden" id="wxm_widgetName"/>
+
+
+        </div>
+    </div>
+        </div>
+        <div id="minblocks"></div>
+        <div id="normalblocks">
+    <div id="wx1" class="widget normal schedulingLesson" style="width: 1024px; border: 1px solid lightgray;">
+        <div id="wx1_module" class="schedulingLesson"></div>
+        <div class="header">
+            <div class="borders">
+                <div class="nw"></div>
+                <div class="ne"></div>
+            </div>
+            <div class="widget_header">
+                    <h2>Учебное расписание</h2>
+            </div>
+            <div class="buttons">
+        <div class="button-border"></div>
+        <a href="javascript:void(0);" onclick="removeWidget('wx1');" class="close"
+           title="Закрыть">
+            <img src="images/invisible.png" height="32" width="31" alt="Закрыть"/>
+        </a>
+
+        <a onclick="toggleWorkAreaSelector('wx1'); $(this).toggleClass('up').toggleClass('down'); return false;"
+           title="Выбор рабочей области" class="down"></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="borders">
+                <div class="w"></div>
+                <div class="e"></div>
+            </div>
+            <div>
+                <img id="wx1_loader" src="images/ajax-loader.gif" alt="Загрузка"
+                     style="position:absolute; z-index:10; display:none;"/>
+                <img id="wx1_divloader" src="images/back1.png"
+                     style="position:absolute; z-index:20; display:none;"/>
+            </div>
+        <div class="slider">
+            <div class="content hidden">
+<script type="text/javascript" src="client/ru/vsopen/common/selectors/edutermselector/js/eduTermSelector.js?77">
+</script>
+
+    <div class="f-row">
+        <label>Выберите учебный год</label>
+        <div class="f-inputs">
+            <select id="wx1-eduTermSelect" onchange="changeEduTerm('wx1', 'schedulingLesson', this)">
+                    <option value="151371" >
+                        2011-2012
+                    </option>
+                    <option value="167368" >
+                        2012-2013
+                    </option>
+                    <option value="377590" >
+                        2013-2014
+                    </option>
+                    <option value="485845" >
+                        2014-2015
+                    </option>
+                    <option value="707759" >
+                        2015-2016
+                    </option>
+                    <option value="931854" >
+                        2016-2017
+                    </option>
+                    <option value="1171835" selected>
+                        2017-2018
+                    </option>
+            </select>
+        </div>
+    </div>
+
+        <div class="f-row current">
+            <label title="класс">
+                    класс
+            </label>
+            <div class="hid">
+                    <div class="class"></div>
+            </div>
+            <div class="f-inputs">
+
+                    <a href="wx1/schedulingLesson/getWorkAreasBy?id=441904"
+                        onclick="getWorkAreasBy('wx1', 'schedulingLesson', 441904, this); return false;"
+                        class="i-text valid
+                             year">
+                        2 б
+                    </a>
+                <img style="padding-left: 1em; display: none;" src="images/icons/preloader.gif" width="16"
+                         height="16" alt="Подождите..."/>
+            </div>
+        </div>
+
+    <script type="text/javascript">putWASCache('wx1');</script>
+    <div class="f-row f-actions">
+        <div class="f-inputs">
+            <a href="wx1/schedulingLesson/changeWorkArea?id=441904">Перейти</a>
+        </div>
+    </div>
+            </div>
+        </div>
+        <div class="current mb10">
+            Учебный год 2017-2018
+        </div>
+
+        <div class="current breadcrumbs_draw "
+            onClick="breadcrumbs_click(this);">
+
+                <img src="images/classes_draw.gif" style="float: right;"/>
+            <span>2 б</span>
+        </div>
+    <div class="navi_class hid">
+
+        <ul class="grades">
+                <li onMouseOver="getClasses('wx1', '2', this);" class="sel">
+                    2
+                    <ul id="wx1_grade_2" class="letters">
+                            <li 
+                                class="sel">
+                                Б
+                            </li>
+                    </ul>
+                </li>
+        </ul>
+        <div class="cb"></div>
+    </div>
+
+    <div class="ierpanel">
+
+                <a href="javascript:void(0);" onClick="getReport('report1_pdf', 'wx1', 'schedulingLesson');"
+                   title="Создать отчет">
+                    <img src="images/report.png" alt="Создать отчет"/>
+                </a>
+    </div>
+
+
+<link rel="stylesheet" href="client/ru/vsopen/edu/scheduling/schedulingLesson/css/lesson.css?77" />
+<script type="text/javascript" src="client/ru/vsopen/edu/scheduling/schedulingLesson/js/lesson.js?77"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        initDate('wx1', 'schedulingLesson');
+        loadScheduleInfo('wx1', 'schedulingLesson');
+    });
+</script>
+
+
+
+<div id="wx1_schedule_main_div">
+    <span id="wx1_temp" class="hid"></span>
+    <div id="wx1_selectors">
+
+        <select class="roomselect hid" onChange="checkRoom('wx1', 'schedulingLesson', this);">
+                <optgroup label="Основной корпус">
+
+                        <option value="50929">
+                                    105 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50930">
+                                    106 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50921">
+                                    200 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50922">
+                                    201 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50923">
+                                    202 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50925">
+                                    203 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50924">
+                                    204 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50926">
+                                    205 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50927">
+                                    206 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50949">
+                                    208 (Кабинет ИЗО)
+                        </option>
+
+
+                        <option value="50928">
+                                    210 (Кабинет информатики и ИКТ)
+                        </option>
+
+
+                        <option value="50931">
+                                    301 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50932">
+                                    302 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50933">
+                                    303 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50934">
+                                    304 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50935">
+                                    305 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50936">
+                                    306 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50937">
+                                    307 (Кабинет начальных классов)
+                        </option>
+
+
+                        <option value="50938">
+                                    308 (Кабинет русского языка)
+                        </option>
+
+
+                        <option value="50939">
+                                    309 (Кабинет русского языка)
+                        </option>
+
+
+                        <option value="50940">
+                                    310 (Кабинет русского языка)
+                        </option>
+
+
+                        <option value="50941">
+                                    311 (Кабинет русского языка)
+                        </option>
+
+
+                        <option value="50942">
+                                    312 (Кабинет химии)
+                        </option>
+
+
+                        <option value="50943">
+                                    313 (Кабинет биологии и экологии)
+                        </option>
+
+
+                        <option value="50967">
+                                    314 (Кабинет иностранного языка)
+                        </option>
+
+
+                        <option value="50944">
+                                    315 (Кабинет иностранного языка)
+                        </option>
+
+
+                        <option value="50945">
+                                    316 (Кабинет физики)
+                        </option>
+
+
+                        <option value="50946">
+                                    317 (кабинет музыки)
+                        </option>
+
+
+                        <option value="50947">
+                                    318 (Кабинет домоводства(кулинария))
+                        </option>
+
+
+                        <option value="50948">
+                                    319 (Кабинет музыки)
+                        </option>
+
+
+                        <option value="51026">
+                                    320 (Кабинет технологии(кройки и шитья))
+                        </option>
+
+
+                        <option value="50950">
+                                    400 (Кабинет математики)
+                        </option>
+
+
+                        <option value="50951">
+                                    401 (Кабинет математики)
+                        </option>
+
+
+                        <option value="50952">
+                                    402 (Кабинет математики)
+                        </option>
+
+
+                        <option value="50953">
+                                    403 (Кабинет географии)
+                        </option>
+
+
+                        <option value="50954">
+                                    404 (Кабинет истории)
+                        </option>
+
+
+                        <option value="50955">
+                                    405 (кабинет обществознания)
+                        </option>
+
+
+                        <option value="50956">
+                                    406 (Кабинет обществознания)
+                        </option>
+
+
+                        <option value="50957">
+                                    407 (Кабинет иностранного языка)
+                        </option>
+
+
+                        <option value="50958">
+                                    408 (Кабинет иностранного языка)
+                        </option>
+
+
+                        <option value="50959">
+                                    409 (Кабинет иностранного языка)
+                        </option>
+
+
+                        <option value="50960">
+                                    410 (Кабинет иностранного языка)
+                        </option>
+
+
+                        <option value="50961">
+                                    411 (Кабинет математики)
+                        </option>
+
+
+                        <option value="50962">
+                                    412 (Кабинет информатики и ИКТ)
+                        </option>
+
+
+                        <option value="50963">
+                                    413 (Кабинет химии)
+                        </option>
+
+
+                        <option value="50964">
+                                    414 (Кабинет русского языка)
+                        </option>
+
+
+                        <option value="50965">
+                                    415 (Кабинет русского языка)
+                        </option>
+
+
+                        <option value="50966">
+                                    416 (Кабинет русского языка)
+                        </option>
+
+
+                        <option value="51797">
+                                    105 Кабинет начальных классов
+                        </option>
+
+
+                        <option value="51798">
+                                    106 Кабинет начальных классов
+                        </option>
+
+
+                        <option value="51792">
+                                    209 Кабинет начальных классов
+                        </option>
+
+
+                        <option value="51795">
+                                    300 Кабинет начальных классов
+                        </option>
+
+
+                        <option value="51796">
+                                    301 кабинет начальных классов
+                        </option>
+
+
+                        <option value="51029">
+                                    Актовый зал
+                        </option>
+
+
+                        <option value="51028">
+                                    Библиотека
+                        </option>
+
+
+                        <option value="51030">
+                                    Медицинский блок
+                        </option>
+
+
+                        <option value="51032">
+                                    Плавательный бассейн
+                        </option>
+
+
+                        <option value="51027">
+                                    Слесарная мастерская
+                        </option>
+
+
+                        <option value="51025">
+                                    Спортивный зал 1
+                        </option>
+
+
+                        <option value="51688">
+                                    Спортивный зал 2
+                        </option>
+
+
+                        <option value="51031">
+                                    Столовая и пищеблок
+                        </option>
+
+
+                        <option value="50968">
+                                    Столярная мастерская
+                        </option>
+
+
+                        <option value="51689">
+                                    Швейная мастерская
+                        </option>
+
+                </optgroup>
+        </select>
+
+
+    <select id="wx1_subepcid" class="subepcselect hid standart_select_2x" onchange="getEpcTeacher('wx1', 'schedulingLesson', this)"></select>
+
+    <select id="wx1_epcid" class="epcselect hid standart_select_2x" onchange="getEpcTeacher('wx1', 'schedulingLesson', this)">
+                <option value="4826764" data-subgroup="false" class="isyear"
+                        data-subject="Русский язык" data-term="1171835" data-subGroup="false">
+                    (Б) Русский язык</option>
+                <option value="4826772" data-subgroup="false" class="isyear"
+                        data-subject="Литературное чтение" data-term="1171835" data-subGroup="false">
+                    (Б) Литературное чтение</option>
+                <optgroup data-term="1171835" class="isyear"
+                          label="(Б) Иностранный язык">
+                        <option value="5021662" data-subgroup="true"
+                                class="isyear" data-subject="Иностранный язык"
+                                data-term="1171835" data-subGroup="true">
+                            английский 1 (английский)
+                        </option>
+                        <option value="5021664" data-subgroup="true"
+                                class="isyear" data-subject="Иностранный язык"
+                                data-term="1171835" data-subGroup="true">
+                            английский 2 (английский)
+                        </option>
+                </optgroup>
+                <option value="4826771" data-subgroup="false" class="isyear"
+                        data-subject="Математика" data-term="1171835" data-subGroup="false">
+                    (Б) Математика</option>
+                <option value="4826770" data-subgroup="false" class="isyear"
+                        data-subject="Окружающий мир" data-term="1171835" data-subGroup="false">
+                    (Б) Окружающий мир</option>
+                <option value="4826768" data-subgroup="false" class="isyear"
+                        data-subject="Изобразительное искусство" data-term="1171835" data-subGroup="false">
+                    (Б) Изобразительное искусство</option>
+                <option value="4826769" data-subgroup="false" class="isyear"
+                        data-subject="Музыка" data-term="1171835" data-subGroup="false">
+                    (Б) Музыка</option>
+                <option value="4826766" data-subgroup="false" class="isyear"
+                        data-subject="Физическая культура" data-term="1171835" data-subGroup="false">
+                    (Б) Физическая культура</option>
+                <option value="4826767" data-subgroup="false" class="isyear"
+                        data-subject="Технология" data-term="1171835" data-subGroup="false">
+                    (Б) Технология</option>
+                <optgroup data-term="1171835" class="isyear"
+                          label="(О) Шахматы">
+                        <option value="5043949" data-subgroup="true"
+                                class="isyear" data-subject="Шахматы"
+                                data-term="1171835" data-subGroup="true">
+                            Шахматы
+                        </option>
+                </optgroup>
+    </select>
+
+    </div>
+    <div id="wx1_templates">
+                <span>Базовый</span>
+    </div>
+    <input type="hidden" value="111948" id="wx1_template">
+
+    <div style="padding-bottom: 10px; padding-top: 10px" class="standart-block">
+        <table class="navigation">
+            <tr>
+                <td class="prevweek">
+                    <div>
+                        <a title="Прошлая неделя" href="javascript:void(0);" class="previous_week" onClick="changeWeek('wx1', 'schedulingLesson', this);">
+                            <img src="images/arrow_left_green_48.png" />
+                        </a>
+                    </div>
+                </td>
+                    <td class="datejumper">
+                        <div>
+                            <label for="wx1_calendar" class="epcselectdiv-label">Перейти к дате</label>
+                            <input readonly style="width:100px; text-align: center;"
+                                   class="vsopen-limited-calendar-with-change" id="wx1_calendar"
+                                   data-mindate="2017-09-01" data-maxdate="2018-08-31"
+                                   onChange="changeDate('wx1', 'schedulingLesson');" value="20.12.2017"/>
+                        </div>
+                    </td>
+                <td class="nextweek">
+                    <div>
+                        <a title="Следующая неделя" href="javascript:void(0);" class="next_week" onClick="changeWeek('wx1', 'schedulingLesson', this);">
+                            <img src="images/arrow_right_green_48.png" />
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="standart-block-end"></div>
+    </div>
+    
+    <div style="padding-bottom: 10px; padding-top: 10px" class="standart-block">
+        <div class="standart-block-float-left" style="width:40%">
+            <a href="javascript:void(0);" onClick="loadByClass('wx1', 'schedulingLesson');" class="hid" id="wx1_back_to_USSR" title="Вернуться к расписанию класса">Вернуться к расписанию класса</a>
+        </div>
+        <div class="standart-block-float-left schedule-hint hid" style="width:40%">
+            <label for="wx1_schedule_hint" style="display: initial;">Расписание для</label>
+            <strong id="wx1_schedule_hint"></strong>
+        </div>
+        <div class="standart-block-end"></div>
+    </div>
+
+    <table style="padding-bottom: 10px; padding-top: 10px; width: 100%" class="schedule-main">
+        <tr>
+            <td class="standart-block-float-left week-left-header">
+                <strong class="big-header">Понедельник</strong>
+                <span id="wx1_date_0" style="display:block;"></span>
+            </td>
+            <td class="standart-block-float-left week-center"></td>
+            <td class="standart-block-float-left week-right-header">
+                <strong class="big-header">Четверг</strong>
+                <span id="wx1_date_3" style="display:block;"></span>
+            </td>
+        </tr>
+        <tr class="schedule-tr">
+            <td class="standart-block-float-left week-left">
+                <div class="wireFrame">
+                    <table id="wx1_table_0" class="alter-table-colored short-table"></table>
+                    <div class="ctl"></div>
+                    <div class="ctr"></div>
+                    <div class="cbl"></div>
+                    <div class="cbr"></div>
+                </div>
+            </td>
+            <td class="standart-block-float-left week-center"></td>
+            <td class="standart-block-float-left week-right">
+                <div class="wireFrame">
+                    <table id="wx1_table_3" class="alter-table-colored short-table"></table>
+                    <div class="ctl"></div>
+                    <div class="ctr"></div>
+                    <div class="cbl"></div>
+                    <div class="cbr"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="standart-block-float-left week-left-header">
+                <strong class="big-header">Вторник</strong>
+                <span id="wx1_date_1" style="display:block;"></span>
+            </td>
+            <td class="standart-block-float-left week-center"></td>
+            <td class="standart-block-float-left week-right-header">
+                <strong class="big-header">Пятница</strong>
+                <span id="wx1_date_4" style="display:block;"></span>
+            </td>
+        </tr>
+        <tr class="schedule-tr">
+            <td class="standart-block-float-left week-left">
+                <div class="wireFrame">
+                    <table id="wx1_table_1" class="alter-table-colored short-table"></table>
+                    <div class="ctl"></div>
+                    <div class="ctr"></div>
+                    <div class="cbl"></div>
+                    <div class="cbr"></div>
+                </div>
+            </td>
+            <td class="standart-block-float-left week-center"></td>
+            <td class="standart-block-float-left week-right">
+                <div class="wireFrame">
+                    <table id="wx1_table_4" class="alter-table-colored short-table"></table>
+                    <div class="ctl"></div>
+                    <div class="ctr"></div>
+                    <div class="cbl"></div>
+                    <div class="cbr"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="standart-block-float-left week-left-header">
+                <strong class="big-header">Среда</strong>
+                <span id="wx1_date_2" style="display:block;"></span>
+            </td>
+            <td class="standart-block-float-left week-center"></td>
+            <td class="standart-block-float-left week-right-header">
+                <strong class="big-header">Суббота</strong>
+                <span id="wx1_date_5" style="display:block;"></span>
+            </td>
+        </tr>
+        <tr class="schedule-tr">
+            <td class="standart-block-float-left week-left">
+                <div class="wireFrame">
+                    <table id="wx1_table_2" class="alter-table-colored short-table"></table>
+                    <div class="ctl"></div>
+                    <div class="ctr"></div>
+                    <div class="cbl"></div>
+                    <div class="cbr"></div>
+                </div>
+            </td>
+            <td class="standart-block-float-left week-center"></td>
+            <td class="standart-block-float-left week-right">
+                <div class="wireFrame">
+                    <table id="wx1_table_5" class="alter-table-colored short-table"></table>
+                    <div class="ctl"></div>
+                    <div class="ctr"></div>
+                    <div class="cbl"></div>
+                    <div class="cbr"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div style="padding-bottom: 10px; padding-top: 10px" class="standart-block schedule-edit hid">
+        <div class="standart-block-float-left days-list">
+            <table class="alter-table-colored long-table boldfont">
+                <tr class="big-header">
+                    <th>
+                        <span id="wx1_edit_span_0" class="hid">Понедельник</span>
+                        <a id="wx1_edit_link_0" href="javascript:void(0);" class="js-schedule-edit-day">Понедельник</a>
+                    </th>
+                    <th>
+                        <span id="wx1_edit_span_1" class="hid">Вторник</span>
+                        <a id="wx1_edit_link_1" href="javascript:void(0);" class="js-schedule-edit-day">Вторник</a>
+                    </th>
+                    <th>
+                        <span id="wx1_edit_span_2" class="hid">Среда</span>
+                        <a id="wx1_edit_link_2" href="javascript:void(0);" class="js-schedule-edit-day">Среда</a>
+                    </th>
+                    <th>
+                        <span id="wx1_edit_span_3" class="hid">Четверг</span>
+                        <a id="wx1_edit_link_3" href="javascript:void(0);" class="js-schedule-edit-day">Четверг</a>
+                    </th>
+                    <th>
+                        <span id="wx1_edit_span_4" class="hid">Пятница</span>
+                        <a id="wx1_edit_link_4" href="javascript:void(0);" class="js-schedule-edit-day">Пятница</a>
+                    </th>
+                    <th>
+                        <span id="wx1_edit_span_5" class="hid">Суббота</span>
+                        <a id="wx1_edit_link_5" href="javascript:void(0);" class="js-schedule-edit-day">Суббота</a>
+                    </th>
+                </tr>
+                <tr style="text-align: center;">
+                    <td id="wx1_edit_date_0"></td>
+                    <td id="wx1_edit_date_1"></td>
+                    <td id="wx1_edit_date_2"></td>
+                    <td id="wx1_edit_date_3"></td>
+                    <td id="wx1_edit_date_4"></td>
+                    <td id="wx1_edit_date_5"></td>
+                </tr>
+            </table>
+        </div>
+
+    <div class="epcselectdiv">
+        <label for="wx1_calltableselect" class="epcselectdiv-label">Текущее расписание звонков: </label>
+        <select class="standart_select_15x calltableselect hid" id="wx1_calltableselect" onChange="changeTable('wx1', 'schedulingLesson');">
+                <option value="16223">
+                    Для 1 - х классов
+                </option>
+                <option value="16224">
+                    Для 2-4 классов
+                </option>
+                <option value="16225">
+                    Для 5-8 классов
+                </option>
+                <option value="16780">
+                    Для 9-11 классов
+                </option>
+        </select>
+    </div>
+
+        <div class="standart-block-float-left wireFrame edit-schedule">
+            <table class="alter-table-colored long-table" id="wx1_schedule_table"></table>
+            <div class="ctl"></div>
+            <div class="ctr"></div>
+            <div class="cbl"></div>
+            <div class="cbr"></div>
+        </div>
+        <div class="standart-block-end"></div>
+    </div>
+    <div style="padding-bottom: 10px; padding-top: 10px" class="standart-block">
+        <table class="navigation">
+            <tr>
+                <td class="prevweek">
+                    <div>
+                        <a title="Прошлая неделя" href="javascript:void(0);" class="previous_week" onClick="changeWeek('wx1', 'schedulingLesson', this);">
+                            <img src="images/arrow_left_green_48.png" />
+                        </a>
+                    </div>
+                </td>
+                <td class="nextweek">
+                    <div>
+                        <a title="Следующая неделя" href="javascript:void(0);" class="next_week" onClick="changeWeek('wx1', 'schedulingLesson', this);">
+                            <img src="images/arrow_right_green_48.png" />
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="standart-block-end"></div>
+    </div>
+    
+</div>
+
+        </div>
+        <div class="footer">
+<div class="borders">
+    <div class="sw"></div>
+    <div class="se"></div>
+    <div class="s"></div>
+</div>
+<!--в данных инпутах содержится информация для подтверждений-->
+<input value="schedulingLesson" type="hidden" id="wx1_widgetName"/>
+
+    <input value="false" type="hidden" id="wx1_widgetIsDirector"/>
+
+        <div style="font-size : 13px; position : absolute; right : 3px; top : 1px;"
+             id="wx1_confirmContainer">
+            Достоверность данных  подтвердил(а) Забуга К.Д., 09.11.2017
+        </div>
+
+        </div>
+    </div>
+    <div id="wx0" class="widget normal start" style="width: 600px; border: 1px solid lightgray;">
+        <div id="wx0_module" class="start"></div>
+        <div class="header">
+            <div class="borders">
+                <div class="nw"></div>
+                <div class="ne"></div>
+            </div>
+            <div class="widget_header">
+                    <h2>Добро пожаловать, Тимоновский Никита Александрович.</h2>
+            </div>
+            <div class="buttons">
+        <div class="button-border"></div>
+        <a href="javascript:void(0);" onclick="removeWidget('wx0');" class="close"
+           title="Закрыть">
+            <img src="images/invisible.png" height="32" width="31" alt="Закрыть"/>
+        </a>
+
+            </div>
+        </div>
+        <div class="content">
+            <div class="borders">
+                <div class="w"></div>
+                <div class="e"></div>
+            </div>
+            <div>
+                <img id="wx0_loader" src="images/ajax-loader.gif" alt="Загрузка"
+                     style="position:absolute; z-index:10; display:none;"/>
+                <img id="wx0_divloader" src="images/back1.png"
+                     style="position:absolute; z-index:20; display:none;"/>
+            </div>
+        <div class="current mb10">
+            Учебный год 2017-2018
+        </div>
+
+    <div class="ierpanel">
+
+    </div>
+
+
+<link rel="stylesheet" type="text/css" href="client/ru/vsopen/base/start/css/main.css?77" />
+
+<div class="selected6 err newsHeader">
+    Уважаемые пользователи!<br/>
+</div>
+<div class="selected6 news">
+    <h3 class="b err">В системе появилась возможность разграничения и назначения нескольких ролей одному пользователю (например, родитель и учитель, заместитель директора и учитель, классный руководитель и учитель и т.д.).
+        Для работы с нужной ролью в правом верхнем углу в поле "Вы вошли как" в выпадающем списке сделайте соответствующий выбор.</h3>
+</div>
+<span class="tar db">
+    <a class="downloadLink b" href="/UPLOAD/presentation.pdf">
+        Порядок перехода на новый учебный год
+    </a>
+    <a class="downloadLink" href="/UPLOAD/new_edu_year.pdf">
+        Инструкция по работе в новом учебном году
+    </a>
+    <a class="downloadLink" href="/UPLOAD/handbook.zip">
+        Скачать руководство пользователя
+    </a>
+    <a class="downloadLink"
+       href="/UPLOAD/new_journal.zip">Скачать руководство пользователя "Учебный журнал"
+    </a>
+    <a class="downloadLink" href="/UPLOAD/edu_term_course.pdf">
+        Инструкция по добавлению курса, не рассчитанного на полный учебный год
+    </a>
+</span>
+
+    <div class="section" title="Классы">
+        <div class="section-content">
+            <ul>
+                    <li>
+                        <a href="wx0/schedulingLesson"
+                           onClick="oneExec(this);"
+                           alt="Учебное расписание"
+                           style="background: url(client/ru/vsopen/edu/scheduling/schedulingLesson/images/icon.gif) no-repeat 0px 10px ">
+                            Учебное расписание
+                        </a>
+                    </li>
+                    <li>
+                        <a href="wx0/eduplans"
+                           onClick="oneExec(this);"
+                           alt="Учебные планы"
+                           style="background: url(client/ru/vsopen/edu/eduplans/images/icon.gif) no-repeat 0px 10px ">
+                            Учебные планы
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section" title="Образовательный процесс">
+        <div class="section-content">
+            <ul>
+                    <li>
+                        <a href="wx0/thematicplans"
+                           onClick="oneExec(this);"
+                           alt="Тематическое планирование"
+                           style="background: url(client/ru/vsopen/edu/thematicplans/images/icon.gif) no-repeat 0px 10px ">
+                            Тематическое планирование
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section" title="Сервис">
+        <div class="section-content">
+            <ul>
+                    <li>
+                        <a href="wx0/messaging"
+                           onClick="oneExec(this);"
+                           alt="Внутренняя почта"
+                           style="background: url(client/ru/vsopen/common/service/messaging/images/icon.gif) no-repeat 0px 10px ">
+                            Внутренняя почта
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section" title="Успеваемость">
+        <div class="section-content">
+            <ul>
+                    <li>
+                        <a href="wx0/studentDiary"
+                           onClick="oneExec(this);"
+                           alt="Дневник"
+                           style="background: url(client/ru/vsopen/edu/xreports/studentDiary/images/icon.gif) no-repeat 0px 10px ">
+                            Дневник
+                        </a>
+                    </li>
+                    <li>
+                        <a href="wx0/studentportfolio"
+                           onClick="oneExec(this);"
+                           alt="Портфолио ученика"
+                           style="background: url(client/ru/vsopen/edu/students/portfolio/images/icon.gif) no-repeat 0px 10px ">
+                            Портфолио ученика
+                        </a>
+                    </li>
+                    <li>
+                        <a href="wx0/studentReport"
+                           onClick="oneExec(this);"
+                           alt="Табель успеваемости"
+                           style="background: url(client/ru/vsopen/edu/xreports/studentReport/images/icon.gif) no-repeat 0px 10px ">
+                            Табель успеваемости
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+<div class="cb"></div>        </div>
+        <div class="footer">
+<div class="borders">
+    <div class="sw"></div>
+    <div class="se"></div>
+    <div class="s"></div>
+</div>
+<!--в данных инпутах содержится информация для подтверждений-->
+<input value="start" type="hidden" id="wx0_widgetName"/>
+
+
+        </div>
+    </div>
+        </div>
+        <div id="header">
+            <a href="">
+                <img src="images/logo.gif" alt="Виртуальная школа"
+                     style="position: absolute"/>
+            </a>
+            <div id="sidebarblock">
+
+
+<script type="text/javascript" src="client/ru/vsopen/base/sideBar/js/main.js?77"></script>
+<link rel="stylesheet" type="text/css" href="client/ru/vsopen/base/sideBar/css/style.css?77"/>
+
+<div class="top_menu">
+    <ul>
+        <li class="menu_li" onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+            <div class="tmr">
+                <a href="add/start">Начать работу</a>
+            </div>
+        </li>
+            <li class="menu_li" onmouseover="getSubTopMenu(this);" onmouseout="hideSubTopMenu(this);">
+                <div class="tmr">
+                    <span>Классы</span>
+                </div>
+                <div class="sub hid">
+                    <div class="cont">
+                        <ul>
+                                <li onClick="locationSchool('add/schedulingLesson');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Учебное расписание</span>
+                                </li>
+                                <li onClick="locationSchool('add/eduplans');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Учебные планы</span>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="menu_li" onmouseover="getSubTopMenu(this);" onmouseout="hideSubTopMenu(this);">
+                <div class="tmr">
+                    <span>Образовательный процесс</span>
+                </div>
+                <div class="sub hid">
+                    <div class="cont">
+                        <ul>
+                                <li onClick="locationSchool('add/thematicplans');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Тематическое планирование</span>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="menu_li" onmouseover="getSubTopMenu(this);" onmouseout="hideSubTopMenu(this);">
+                <div class="tmr">
+                    <span>Сервис</span>
+                </div>
+                <div class="sub hid">
+                    <div class="cont">
+                        <ul>
+                                <li onClick="locationSchool('add/messaging');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Внутренняя почта</span>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="menu_li" onmouseover="getSubTopMenu(this);" onmouseout="hideSubTopMenu(this);">
+                <div class="tmr">
+                    <span>Успеваемость</span>
+                </div>
+                <div class="sub hid">
+                    <div class="cont">
+                        <ul>
+                                <li onClick="locationSchool('add/studentDiary');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Дневник</span>
+                                </li>
+                                <li onClick="locationSchool('add/studentportfolio');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Портфолио ученика</span>
+                                </li>
+                                <li onClick="locationSchool('add/studentReport');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Табель успеваемости</span>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+    </ul>
+</div>
+            </div>
+            <div id="timer" class="timer">
+                20:13
+            </div>
+            <div class="session_dialog_window">
+                <div class="in">
+                    <div class="modal-header student__header clearfix">
+                        <span class="modal-title">Уважаемый пользователь!</span>
+                    </div>
+                    <div>
+                        <span>В целях безопасности сеанс работы завершен, т.к. длительное время вы не
+                            совершали никаких действий.
+                            Для продолжения работы введите, пожалуйста, заново ваши логин и пароль.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div id="right-panel">
+
+
+    <a href="add/persons" onClick="oneExec(this);" title="Личный кабинет">
+        <img src="client/ru/vsopen/business/persons/images/icon.gif" alt="Данные"/>
+    </a>
+    <a href="add/messaging" onClick="oneExec(this);" title="Внутренняя почта" class="messaging">
+        0
+    </a>
+    <a href="login?logout=true" onClick="oneExec(this);" title="Выход">
+        <img src="images/icons/logout.gif" alt="Выход"/>
+    </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

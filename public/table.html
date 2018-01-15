@@ -1,0 +1,1767 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+    <base href="https://www.vsopen.ru/app/" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <title>VSopen.ru :: Виртуальная школа</title>
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/css/iestyle.css?75" />
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/css/style.css?75"/>
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/css/pretty_table.css?75"/>
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/css/smartpaginator.css?75"/>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+
+    <!-- jquery -->
+    <script type="text/javascript" src="client/ru/vsopen/system/js/jquery-ui/js/jquery.min.js?75"></script>
+    <script type="text/javascript" src="client/ru/vsopen/system/js/jquery-ui/js/jquery-ui.min.js?75"></script>
+    <link rel="stylesheet" href="client/ru/vsopen/system/js/jquery-ui/css/jquery-ui.min.css?75"/>
+    <script type="text/javascript" src="client/ru/vsopen/system/js/globalvsopen.js?75"></script>
+    <script type="text/javascript" src="client/ru/vsopen/system/js/jquery-redirect/jquery.redirect.js?75"></script>
+
+    <!-- underscore -->
+    <script type="text/javascript" src="client/ru/vsopen/system/js/common/underscore-min.js?75"></script>
+
+    <!-- qtip tooltip-->
+    <script type="text/javascript" src="client/ru/vsopen/system/js/qtip/jquery.qtip.js?75"></script>
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/js/qtip/jquery.qtip.css?75"/>
+
+    <!-- chosen -->
+    <script src="client/ru/vsopen/system/js/chosen/chosen.jquery.min.js?75" type="text/javascript"></script>
+    <script src="client/ru/vsopen/system/js/chosen/chosen.proto.min.js?75" type="text/javascript"></script>
+    <link rel="stylesheet" href="client/ru/vsopen/system/js/chosen/chosen.min.css?75"/>
+
+    <!--workAreaSelector-->
+    <link rel="stylesheet" href="client/ru/vsopen/common/workareas/css/main.css?75"/>
+    <link rel="stylesheet" href="client/ru/vsopen/common/workareas/css/cssf-base.css?75"/>
+    <script type="text/javascript" src="client/ru/vsopen/common/workareas/js/workAreaSelector.js?75"></script>
+
+    <link type="text/css" rel="Stylesheet" href="client/ru/vsopen/system/css/ie6FixSelect.css?75"/>
+</head>
+<body>
+    <iframe class="iframe-layer"></iframe>
+    <div id="main_header"></div>
+    <div id="main">
+        <div id="left">
+    <div id="wxm" class="widget normal menu" style="width: 80px; border: 1px solid lightgray;">
+        <div id="wxm_module" class="menu"></div>
+        <div class="header">
+            <div class="borders">
+                <div class="nw"></div>
+                <div class="ne"></div>
+            </div>
+            <div class="widget_header">
+            </div>
+            <div class="buttons">
+
+            </div>
+        </div>
+        <div class="content">
+            <div class="borders">
+                <div class="w"></div>
+                <div class="e"></div>
+            </div>
+            <div>
+                <img id="wxm_loader" src="images/ajax-loader.gif" alt="Загрузка"
+                     style="position:absolute; z-index:10; display:none;"/>
+                <img id="wxm_divloader" src="images/back1.png"
+                     style="position:absolute; z-index:20; display:none;"/>
+            </div>
+
+
+<link rel="stylesheet" type="text/css" href="client/ru/vsopen/base/menu/css/style.css?75"/>
+
+<div class="left_menu">
+        <a href="add/schedulingLesson" onClick="oneExec(this);" title="Учебное расписание" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/scheduling/schedulingLesson/images/icon.gif" alt="Учебное расписание"/>
+        </a>
+        <a href="add/eduplans" onClick="oneExec(this);" title="Учебные планы" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/eduplans/images/icon.gif" alt="Учебные планы"/>
+        </a>
+</div>
+<div class="left_menu">
+        <a href="add/thematicplans" onClick="oneExec(this);" title="Тематическое планирование" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/thematicplans/images/icon.gif" alt="Тематическое планирование"/>
+        </a>
+</div>
+<div class="left_menu">
+        <a href="add/messaging" onClick="oneExec(this);" title="Внутренняя почта" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/common/service/messaging/images/icon.gif" alt="Внутренняя почта"/>
+        </a>
+</div>
+<div class="left_menu">
+        <a href="add/studentDiary" onClick="oneExec(this);" title="Дневник" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/xreports/studentDiary/images/icon.gif" alt="Дневник"/>
+        </a>
+        <a href="add/studentportfolio" onClick="oneExec(this);" title="Портфолио ученика" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/students/portfolio/images/icon.gif" alt="Портфолио ученика"/>
+        </a>
+        <a href="add/studentReport" onClick="oneExec(this);" title="Табель успеваемости" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/xreports/studentReport/images/icon.gif" alt="Табель успеваемости"/>
+        </a>
+</div>
+        </div>
+        <div class="footer">
+<div class="borders">
+    <div class="sw"></div>
+    <div class="se"></div>
+    <div class="s"></div>
+</div>
+<!--в данных инпутах содержится информация для подтверждений-->
+<input value="menu" type="hidden" id="wxm_widgetName"/>
+
+
+        </div>
+    </div>
+        </div>
+        <div id="minblocks"></div>
+        <div id="normalblocks">
+    <div id="wx0" class="widget normal studentReport" style="width: 1024px; border: 1px solid lightgray;">
+        <div id="wx0_module" class="studentReport"></div>
+        <div class="header">
+            <div class="borders">
+                <div class="nw"></div>
+                <div class="ne"></div>
+            </div>
+            <div class="widget_header">
+                    <h2>Табель успеваемости ученика Тимоновский Н.А.</h2>
+            </div>
+            <div class="buttons">
+        <div class="button-border"></div>
+        <a href="javascript:void(0);" onclick="removeWidget('wx0');" class="close"
+           title="Закрыть">
+            <img src="images/invisible.png" height="32" width="31" alt="Закрыть"/>
+        </a>
+
+        <a onclick="toggleWorkAreaSelector('wx0'); $(this).toggleClass('up').toggleClass('down'); return false;"
+           title="Выбор рабочей области" class="down"></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="borders">
+                <div class="w"></div>
+                <div class="e"></div>
+            </div>
+            <div>
+                <img id="wx0_loader" src="images/ajax-loader.gif" alt="Загрузка"
+                     style="position:absolute; z-index:10; display:none;"/>
+                <img id="wx0_divloader" src="images/back1.png"
+                     style="position:absolute; z-index:20; display:none;"/>
+            </div>
+        <div class="slider">
+            <div class="content hidden">
+<script type="text/javascript" src="client/ru/vsopen/common/selectors/childselector/js/childSelector.js?75"></script>
+
+            </div>
+        </div>
+        <div class="current mb10">
+            Учебный год 2017-2018
+        </div>
+
+    <div class="ierpanel">
+
+                <a href="javascript:void(0);" onClick="getReport('report1_pdf', 'wx0', 'studentReport');"
+                   title="Создать отчет">
+                    <img src="images/report.png" alt="Создать отчет"/>
+                </a>
+    </div>
+
+
+<script type="text/javascript" src="client/ru/vsopen/system/js/support/selectToUISlider.jQuery.js?75"></script>
+<script type="text/javascript" src="client/ru/vsopen/system/js/jquery.alerts.js?75"></script>
+<script type="text/javascript" src="client/ru/vsopen/edu/xreports/studentReport/js/report.js?75"></script>
+
+<link rel="stylesheet" href="client/ru/vsopen/edu/xreports/studentJournal/css/journal.css?75" />
+<link rel="stylesheet" href="client/ru/vsopen/edu/eduplans/eduplancoursetemplate/css/main.css?75" />
+<link rel="stylesheet" href="client/ru/vsopen/edu/eduplans/eduplancoursetemplate/css/additional.css?75" />
+<link rel="stylesheet" href="client/ru/vsopen/system/css/jquery.alerts.css?75" />
+<link rel="stylesheet" href="client/ru/vsopen/system/css/jquery.tooltip.css?75" />
+<link rel="stylesheet" href="client/ru/vsopen/common/service/smscontrolling/css/ui.slider.extras.css?75" />
+<link rel="stylesheet" href="client/ru/vsopen/base/start/css/main.css?75" />
+
+<link rel="stylesheet" href="client/ru/vsopen/edu/xreports/studentReport/css/report.css?75" />
+
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            initStudentReport('wx0', 'studentReport', 36, 1256986);
+        });
+    </script>
+
+    <div class="b-widget-large">
+        <div class="b-widget-content clearfix journal">
+
+
+    <div class="b-calendar clearfix">
+        <div class="eduterm-line">
+    <table>
+        <tr>
+                <td width="25%" align="center">
+                <a class="segoe" href="javascript:void(0);"
+                   onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '01.09.2017', '29.10.2017');">Первая четверть</a>
+                </td>
+                <td width="25%" align="center">
+                <a class="segoe" href="javascript:void(0);"
+                   onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '08.11.2017', '26.12.2017');">Вторая четверть</a>
+                </td>
+                <td width="25%" align="center">
+                <a class="segoe" href="javascript:void(0);"
+                   onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '10.01.2018', '25.03.2018');">Третья четверть</a>
+                </td>
+                <td width="25%" align="center">
+                <a class="segoe" href="javascript:void(0);"
+                   onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '02.04.2018', '25.05.2018');">Четвертая четверть</a>
+                </td>
+        </tr>
+    </table>
+        </div>
+        <div class="ui-slider-container">
+    <select name="startDate" id="wx0_startDate">
+                <option value="36" >01.09.2017</option>
+                <option value="37" >04.09.2017</option>
+                <option value="38" >11.09.2017</option>
+                <option value="39" >18.09.2017</option>
+                <option value="40" >25.09.2017</option>
+                <option value="41" >02.10.2017</option>
+                <option value="42" >09.10.2017</option>
+                <option value="43" >16.10.2017</option>
+                <option value="44" >23.10.2017</option>
+                <option value="45" >30.10.2017</option>
+                <option value="46" >06.11.2017</option>
+                <option value="47" >13.11.2017</option>
+                <option value="48" >20.11.2017</option>
+                <option value="49"  selected="selected" >27.11.2017</option>
+                <option value="50" >04.12.2017</option>
+                <option value="51" >11.12.2017</option>
+                <option value="52" >18.12.2017</option>
+                <option value="53" >25.12.2017</option>
+                <option value="1" >01.01.2018</option>
+                <option value="2" >08.01.2018</option>
+                <option value="3" >15.01.2018</option>
+                <option value="4" >22.01.2018</option>
+                <option value="5" >29.01.2018</option>
+                <option value="6" >05.02.2018</option>
+                <option value="7" >12.02.2018</option>
+                <option value="8" >19.02.2018</option>
+                <option value="9" >26.02.2018</option>
+                <option value="10" >05.03.2018</option>
+                <option value="11" >12.03.2018</option>
+                <option value="12" >19.03.2018</option>
+                <option value="13" >26.03.2018</option>
+                <option value="14" >02.04.2018</option>
+                <option value="15" >09.04.2018</option>
+                <option value="16" >16.04.2018</option>
+                <option value="17" >23.04.2018</option>
+                <option value="18" >30.04.2018</option>
+                <option value="19" >07.05.2018</option>
+                <option value="20" >14.05.2018</option>
+                <option value="21" >21.05.2018</option>
+                <option value="22" >28.05.2018</option>
+                <option value="23" >04.06.2018</option>
+                <option value="24" >11.06.2018</option>
+                <option value="25" >18.06.2018</option>
+                <option value="26" >25.06.2018</option>
+                <option value="27" >02.07.2018</option>
+                <option value="28" >09.07.2018</option>
+                <option value="29" >16.07.2018</option>
+                <option value="30" >23.07.2018</option>
+                <option value="31" >30.07.2018</option>
+                <option value="32" >06.08.2018</option>
+                <option value="33" >13.08.2018</option>
+                <option value="34" >20.08.2018</option>
+                <option value="35" >27.08.2018</option>
+                <option value="35" >31.08.2018</option>
+    </select>
+    <select name="stopDate" id="wx0_stopDate">
+                <option value="36" >01.09.2017</option>
+                <option value="37" >04.09.2017</option>
+                <option value="38" >11.09.2017</option>
+                <option value="39" >18.09.2017</option>
+                <option value="40" >25.09.2017</option>
+                <option value="41" >02.10.2017</option>
+                <option value="42" >09.10.2017</option>
+                <option value="43" >16.10.2017</option>
+                <option value="44" >23.10.2017</option>
+                <option value="45" >30.10.2017</option>
+                <option value="46" >06.11.2017</option>
+                <option value="47" >13.11.2017</option>
+                <option value="48" >20.11.2017</option>
+                <option value="49" >27.11.2017</option>
+                <option value="50" >04.12.2017</option>
+                <option value="51" >11.12.2017</option>
+                <option value="52" >18.12.2017</option>
+                <option value="53" >25.12.2017</option>
+                <option value="1"  selected="selected" >01.01.2018</option>
+                <option value="2" >08.01.2018</option>
+                <option value="3" >15.01.2018</option>
+                <option value="4" >22.01.2018</option>
+                <option value="5" >29.01.2018</option>
+                <option value="6" >05.02.2018</option>
+                <option value="7" >12.02.2018</option>
+                <option value="8" >19.02.2018</option>
+                <option value="9" >26.02.2018</option>
+                <option value="10" >05.03.2018</option>
+                <option value="11" >12.03.2018</option>
+                <option value="12" >19.03.2018</option>
+                <option value="13" >26.03.2018</option>
+                <option value="14" >02.04.2018</option>
+                <option value="15" >09.04.2018</option>
+                <option value="16" >16.04.2018</option>
+                <option value="17" >23.04.2018</option>
+                <option value="18" >30.04.2018</option>
+                <option value="19" >07.05.2018</option>
+                <option value="20" >14.05.2018</option>
+                <option value="21" >21.05.2018</option>
+                <option value="22" >28.05.2018</option>
+                <option value="23" >04.06.2018</option>
+                <option value="24" >11.06.2018</option>
+                <option value="25" >18.06.2018</option>
+                <option value="26" >25.06.2018</option>
+                <option value="27" >02.07.2018</option>
+                <option value="28" >09.07.2018</option>
+                <option value="29" >16.07.2018</option>
+                <option value="30" >23.07.2018</option>
+                <option value="31" >30.07.2018</option>
+                <option value="32" >06.08.2018</option>
+                <option value="33" >13.08.2018</option>
+                <option value="34" >20.08.2018</option>
+                <option value="35" >27.08.2018</option>
+                <option value="35" >31.08.2018</option>
+    </select>
+        </div>
+        <div class="month-line">
+    <table>
+        <tr>
+                <td width="8.33%" align="center">
+                    <a class="segoe" href="javascript:void(0);"
+                       onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '01.09.2017', '30.09.2017');">Сентябрь</a>
+                </td>
+                <td width="8.33%" align="center">
+                    <a class="segoe" href="javascript:void(0);"
+                       onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '01.10.2017', '31.10.2017');">Октябрь</a>
+                </td>
+                <td width="8.33%" align="center">
+                    <a class="segoe" href="javascript:void(0);"
+                       onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '01.11.2017', '30.11.2017');">Ноябрь</a>
+                </td>
+                <td width="8.33%" align="center">
+                    <a class="segoe" href="javascript:void(0);"
+                       onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '01.12.2017', '31.12.2017');">Декабрь</a>
+                </td>
+                <td width="8.33%" align="center">
+                    <a class="segoe" href="javascript:void(0);"
+                       onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '01.01.2018', '31.01.2018');">Январь</a>
+                </td>
+                <td width="8.33%" align="center">
+                    <a class="segoe" href="javascript:void(0);"
+                       onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '01.02.2018', '28.02.2018');">Февраль</a>
+                </td>
+                <td width="8.33%" align="center">
+                    <a class="segoe" href="javascript:void(0);"
+                       onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '01.03.2018', '31.03.2018');">Март</a>
+                </td>
+                <td width="8.33%" align="center">
+                    <a class="segoe" href="javascript:void(0);"
+                       onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '01.04.2018', '30.04.2018');">Апрель</a>
+                </td>
+                <td width="8.33%" align="center">
+                    <a class="segoe" href="javascript:void(0);"
+                       onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '01.05.2018', '31.05.2018');">Май</a>
+                </td>
+                <td width="8.33%" align="center">
+                    <a class="segoe" href="javascript:void(0);"
+                       onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '01.06.2018', '30.06.2018');">Июнь</a>
+                </td>
+                <td width="8.33%" align="center">
+                    <a class="segoe" href="javascript:void(0);"
+                       onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '01.07.2018', '31.07.2018');">Июль</a>
+                </td>
+                <td width="8.33%" align="center">
+                    <a class="segoe" href="javascript:void(0);"
+                       onclick="reportChangeMonth('wx0', 'studentReport', 1256986, '01.08.2018', '31.08.2018');">Август</a>
+                </td>
+        </tr>
+    </table>
+        </div>
+    </div>
+
+
+
+
+    <div class="b-widget-content__main journal_table_wrapper standart-block-top-margin">
+        <div class="b-widget-content__main-section clearfix">
+            <div class="class-journal-grid width-100">
+                <table id="wx0_report_table" class="tbl-students mt10 standart-table-colored">
+
+                    <col width="22px" span="1" valign="middle" align="center">
+                    <col width="166px" span="1" valign="middle">
+                    <col class="test_class" span="45">
+
+                    <tbody>
+    <tr class="student__header week">
+        <td rowspan="2" class="number_td">№</td>
+        <td rowspan="2" class="student_td">Предмет</td>
+        <td class="day_td">Пн</td>
+        <td class="day_td">Вт</td>
+        <td class="day_td">Ср</td>
+        <td class="day_td">Чт</td>
+        <td class="day_td">Пт</td>
+        <td class="day_td">Сб</td>
+        <td class="day_td">Вс</td>
+        <td class="day_td">Пн</td>
+        <td class="day_td">Вт</td>
+        <td class="day_td">Ср</td>
+        <td class="day_td">Чт</td>
+        <td class="day_td">Пт</td>
+        <td class="day_td">Сб</td>
+        <td class="day_td">Вс</td>
+        <td class="day_td">Пн</td>
+        <td class="day_td">Вт</td>
+        <td class="day_td">Ср</td>
+        <td class="day_td">Чт</td>
+        <td class="day_td">Пт</td>
+        <td class="day_td">Сб</td>
+        <td class="day_td">Вс</td>
+        <td class="day_td">Пн</td>
+        <td class="day_td">Вт</td>
+        <td class="day_td">Ср</td>
+        <td class="day_td">Чт</td>
+        <td class="day_td">Пт</td>
+        <td class="day_td">Сб</td>
+        <td class="day_td">Вс</td>
+        <td class="day_td">Пн</td>
+        <td class="day_td">Вт</td>
+        <td class="day_td">Ср</td>
+        <td class="day_td">Чт</td>
+        <td class="day_td">Пт</td>
+        <td class="day_td">Сб</td>
+        <td class="day_td">Вс</td>
+        <td class="day_td">Пн</td>
+        <td rowspan="2" class="number_td">Пропуски</td>
+        <td rowspan="2" class="number_td">Средний балл</td>
+            <td rowspan="2">Первая четверть</td>
+
+
+
+
+        <td rowspan="2" class="number_td">№</td>
+    </tr>
+    <tr class="student__header week">
+        <td class="day_td">27</td>
+        <td class="day_td">28</td>
+        <td class="day_td">29</td>
+        <td class="day_td">30</td>
+        <td class="day_td">1</td>
+        <td class="day_td">2</td>
+        <td class="day_td">3</td>
+        <td class="day_td">4</td>
+        <td class="day_td">5</td>
+        <td class="day_td">6</td>
+        <td class="day_td">7</td>
+        <td class="day_td">8</td>
+        <td class="day_td">9</td>
+        <td class="day_td">10</td>
+        <td class="day_td">11</td>
+        <td class="day_td">12</td>
+        <td class="day_td">13</td>
+        <td class="day_td">14</td>
+        <td class="day_td">15</td>
+        <td class="day_td">16</td>
+        <td class="day_td">17</td>
+        <td class="day_td">18</td>
+        <td class="day_td">19</td>
+        <td class="day_td">20</td>
+        <td class="day_td">21</td>
+        <td class="day_td">22</td>
+        <td class="day_td">23</td>
+        <td class="day_td">24</td>
+        <td class="day_td">25</td>
+        <td class="day_td">26</td>
+        <td class="day_td">27</td>
+        <td class="day_td">28</td>
+        <td class="day_td">29</td>
+        <td class="day_td">30</td>
+        <td class="day_td">31</td>
+        <td class="day_td">1</td>
+    </tr>
+
+                <tr class="student_row">
+                    <td>1</td>
+                    <td>Изобразительное искусство</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  good ">4</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+    <td class="mark_day_td"></td>
+        <td class="mark_day_td good">4</td>
+
+            <td class="mark_day_td">
+                <span  class="mark report_mark excellent">5</span>
+                <br>
+            </td>
+
+
+
+
+
+                    <td>1</td>
+                </tr>
+                        <tr class="student_row">
+                            <td>2</td>
+                            <td>Иностранный язык (английский 2)</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span title="диктант (цифры)" class="mark report_mark  excellent ">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td title="контрольная работа(рубежная)"class="mark_day_td exam">
+            <span  class="mark report_mark b">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span title="" class="mark report_mark  excellent ">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+    <td class="mark_day_td"></td>
+        <td class="mark_day_td excellent">5</td>
+
+            <td class="mark_day_td">
+                <span  class="mark report_mark excellent">5</span>
+                <br>
+            </td>
+
+
+
+
+
+                            <td>2</td>
+                        </tr>
+                <tr class="student_row">
+                    <td>3</td>
+                    <td>Литературное чтение</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  excellent ">5</span>
+            <br>
+        </td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  excellent ">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  excellent ">5</span>
+            <br>
+        </td>
+        <td title="контрольная работа(рубежная)"class="mark_day_td exam">
+            <span  class="mark report_mark b">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  excellent ">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span title="" class="mark report_mark  other ">н</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+    <td class="mark_day_td"><span class="report_mark">1</span></td>
+        <td class="mark_day_td excellent">5</td>
+
+            <td class="mark_day_td">
+                <span  class="mark report_mark excellent">5</span>
+                <br>
+            </td>
+
+
+
+
+
+                    <td>3</td>
+                </tr>
+                <tr class="student_row">
+                    <td>4</td>
+                    <td>Математика</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  passably ">3</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  good ">4</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  good ">4</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td title="контрольная работа(рубежная)"class="mark_day_td exam">
+            <span title="" class="mark report_mark ">3</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span title="" class="mark report_mark  other ">н</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+    <td class="mark_day_td"><span class="report_mark">1</span></td>
+        <td class="mark_day_td passably">3,5</td>
+
+            <td class="mark_day_td">
+                <span  class="mark report_mark good">4</span>
+                <br>
+            </td>
+
+
+
+
+
+                    <td>4</td>
+                </tr>
+                <tr class="student_row">
+                    <td>5</td>
+                    <td>Музыка</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  excellent ">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+    <td class="mark_day_td"></td>
+        <td class="mark_day_td excellent">5</td>
+
+            <td class="mark_day_td">
+                <span  class="mark report_mark excellent">5</span>
+                <br>
+            </td>
+
+
+
+
+
+                    <td>5</td>
+                </tr>
+                <tr class="student_row">
+                    <td>6</td>
+                    <td>Окружающий мир</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  excellent ">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  excellent ">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td title="контрольная работа(рубежная)"class="mark_day_td exam">
+            <span  class="mark report_mark b">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  excellent ">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+    <td class="mark_day_td"></td>
+        <td class="mark_day_td excellent">5</td>
+
+            <td class="mark_day_td">
+                <span  class="mark report_mark excellent">5</span>
+                <br>
+            </td>
+
+
+
+
+
+                    <td>6</td>
+                </tr>
+                <tr class="student_row">
+                    <td>7</td>
+                    <td>Русский язык</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  good ">4</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span title="" class="mark report_mark  passably ">3</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  good ">4</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td title="контрольная работа"class="mark_day_td exam">
+            <span  class="mark report_mark ">4</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td title="контрольная работа(рубежная)"class="mark_day_td exam">
+            <span  class="mark report_mark ">4/4</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  good ">4</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  good ">4</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td title="контроль письма"class="mark_day_td exam">
+            <span title="" class="mark report_mark ">н</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+    <td class="mark_day_td"><span class="report_mark">1</span></td>
+        <td class="mark_day_td passably">3,88</td>
+
+            <td class="mark_day_td">
+                <span  class="mark report_mark good">4</span>
+                <br>
+            </td>
+
+
+
+
+
+                    <td>7</td>
+                </tr>
+                <tr class="student_row">
+                    <td>8</td>
+                    <td>Технология</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  excellent ">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  excellent ">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+    <td class="mark_day_td"></td>
+        <td class="mark_day_td excellent">5</td>
+
+            <td class="mark_day_td">
+                <span  class="mark report_mark excellent">5</span>
+                <br>
+            </td>
+
+
+
+
+
+                    <td>8</td>
+                </tr>
+                <tr class="student_row">
+                    <td>9</td>
+                    <td>Физическая культура</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  excellent ">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  good ">4</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span  class="mark report_mark  excellent ">5</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td class="mark_day_td ">
+            <span title="" class="mark report_mark  other ">н</span>
+            <br>
+        </td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+    <td class="mark_day_td"><span class="report_mark">1</span></td>
+        <td class="mark_day_td good">4,67</td>
+
+            <td class="mark_day_td">
+                <span  class="mark report_mark excellent">5</span>
+                <br>
+            </td>
+
+
+
+
+
+                    <td>9</td>
+                </tr>
+                        <tr class="student_row">
+                            <td>10</td>
+                            <td>Шахматы (Шахматы)</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+        <td >
+</td>
+    <td class="mark_day_td"></td>
+        <td></td>
+
+            <td ></td>
+
+
+
+
+
+                            <td>10</td>
+                        </tr>
+    <tr class="student_row">
+        <td colspan="2">Пропуски по дням</td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td class="mark_day_td">4</td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+
+            <td ></td>
+        <td></td>
+        <td></td>
+                <td></td>
+
+
+
+        <td></td>
+    </tr>
+    <tr class="student__header week">
+        <td rowspan="2" colspan="2" style="background: white;"></td>
+        <td class="day_td">27</td>
+        <td class="day_td">28</td>
+        <td class="day_td">29</td>
+        <td class="day_td">30</td>
+        <td class="day_td">1</td>
+        <td class="day_td">2</td>
+        <td class="day_td">3</td>
+        <td class="day_td">4</td>
+        <td class="day_td">5</td>
+        <td class="day_td">6</td>
+        <td class="day_td">7</td>
+        <td class="day_td">8</td>
+        <td class="day_td">9</td>
+        <td class="day_td">10</td>
+        <td class="day_td">11</td>
+        <td class="day_td">12</td>
+        <td class="day_td">13</td>
+        <td class="day_td">14</td>
+        <td class="day_td">15</td>
+        <td class="day_td">16</td>
+        <td class="day_td">17</td>
+        <td class="day_td">18</td>
+        <td class="day_td">19</td>
+        <td class="day_td">20</td>
+        <td class="day_td">21</td>
+        <td class="day_td">22</td>
+        <td class="day_td">23</td>
+        <td class="day_td">24</td>
+        <td class="day_td">25</td>
+        <td class="day_td">26</td>
+        <td class="day_td">27</td>
+        <td class="day_td">28</td>
+        <td class="day_td">29</td>
+        <td class="day_td">30</td>
+        <td class="day_td">31</td>
+        <td class="day_td">1</td>
+        <td rowspan="2" class="number_td">Пропуски</td>
+        <td rowspan="2" class="number_td">Средний балл</td>
+            <td rowspan="2">Первая четверть</td>
+
+
+
+
+        <td rowspan="2" class="number_td">№</td>
+    </tr>
+    <tr class="student__header week">
+        <td class="day_td">Пн</td>
+        <td class="day_td">Вт</td>
+        <td class="day_td">Ср</td>
+        <td class="day_td">Чт</td>
+        <td class="day_td">Пт</td>
+        <td class="day_td">Сб</td>
+        <td class="day_td">Вс</td>
+        <td class="day_td">Пн</td>
+        <td class="day_td">Вт</td>
+        <td class="day_td">Ср</td>
+        <td class="day_td">Чт</td>
+        <td class="day_td">Пт</td>
+        <td class="day_td">Сб</td>
+        <td class="day_td">Вс</td>
+        <td class="day_td">Пн</td>
+        <td class="day_td">Вт</td>
+        <td class="day_td">Ср</td>
+        <td class="day_td">Чт</td>
+        <td class="day_td">Пт</td>
+        <td class="day_td">Сб</td>
+        <td class="day_td">Вс</td>
+        <td class="day_td">Пн</td>
+        <td class="day_td">Вт</td>
+        <td class="day_td">Ср</td>
+        <td class="day_td">Чт</td>
+        <td class="day_td">Пт</td>
+        <td class="day_td">Сб</td>
+        <td class="day_td">Вс</td>
+        <td class="day_td">Пн</td>
+        <td class="day_td">Вт</td>
+        <td class="day_td">Ср</td>
+        <td class="day_td">Чт</td>
+        <td class="day_td">Пт</td>
+        <td class="day_td">Сб</td>
+        <td class="day_td">Вс</td>
+        <td class="day_td">Пн</td>
+    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+        </div>
+
+    </div>
+
+
+        </div>
+        <div class="footer">
+<div class="borders">
+    <div class="sw"></div>
+    <div class="se"></div>
+    <div class="s"></div>
+</div>
+<!--в данных инпутах содержится информация для подтверждений-->
+<input value="studentReport" type="hidden" id="wx0_widgetName"/>
+
+
+        </div>
+    </div>
+        </div>
+        <div id="header">
+            <a href="">
+                <img src="images/logo.gif" alt="Виртуальная школа"
+                     style="position: absolute"/>
+            </a>
+            <div id="sidebarblock">
+
+
+<script type="text/javascript" src="client/ru/vsopen/base/sideBar/js/main.js?75"></script>
+<link rel="stylesheet" type="text/css" href="client/ru/vsopen/base/sideBar/css/style.css?75"/>
+
+<div class="top_menu">
+    <ul>
+        <li class="menu_li" onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+            <div class="tmr">
+                <a href="add/start">Начать работу</a>
+            </div>
+        </li>
+            <li class="menu_li" onmouseover="getSubTopMenu(this);" onmouseout="hideSubTopMenu(this);">
+                <div class="tmr">
+                    <span>Классы</span>
+                </div>
+                <div class="sub hid">
+                    <div class="cont">
+                        <ul>
+                                <li onClick="locationSchool('add/schedulingLesson');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Учебное расписание</span>
+                                </li>
+                                <li onClick="locationSchool('add/eduplans');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Учебные планы</span>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="menu_li" onmouseover="getSubTopMenu(this);" onmouseout="hideSubTopMenu(this);">
+                <div class="tmr">
+                    <span>Образовательный процесс</span>
+                </div>
+                <div class="sub hid">
+                    <div class="cont">
+                        <ul>
+                                <li onClick="locationSchool('add/thematicplans');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Тематическое планирование</span>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="menu_li" onmouseover="getSubTopMenu(this);" onmouseout="hideSubTopMenu(this);">
+                <div class="tmr">
+                    <span>Сервис</span>
+                </div>
+                <div class="sub hid">
+                    <div class="cont">
+                        <ul>
+                                <li onClick="locationSchool('add/messaging');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Внутренняя почта</span>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="menu_li" onmouseover="getSubTopMenu(this);" onmouseout="hideSubTopMenu(this);">
+                <div class="tmr">
+                    <span>Успеваемость</span>
+                </div>
+                <div class="sub hid">
+                    <div class="cont">
+                        <ul>
+                                <li onClick="locationSchool('add/studentDiary');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Дневник</span>
+                                </li>
+                                <li onClick="locationSchool('add/studentportfolio');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Портфолио ученика</span>
+                                </li>
+                                <li onClick="locationSchool('add/studentReport');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Табель успеваемости</span>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+    </ul>
+</div>
+            </div>
+            <div id="timer" class="timer">
+                20:13
+            </div>
+            <div class="session_dialog_window">
+                <div class="in">
+                    <div class="modal-header student__header clearfix">
+                        <span class="modal-title">Уважаемый пользователь!</span>
+                    </div>
+                    <div>
+                        <span>В целях безопасности сеанс работы завершен, т.к. длительное время вы не
+                            совершали никаких действий.
+                            Для продолжения работы введите, пожалуйста, заново ваши логин и пароль.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div id="right-panel">
+
+
+    <a href="add/persons" onClick="oneExec(this);" title="Личный кабинет">
+        <img src="client/ru/vsopen/business/persons/images/icon.gif" alt="Данные"/>
+    </a>
+    <a href="add/messaging" onClick="oneExec(this);" title="Внутренняя почта" class="messaging">
+        0
+    </a>
+    <a href="login?logout=true" onClick="oneExec(this);" title="Выход">
+        <img src="images/icons/logout.gif" alt="Выход"/>
+    </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

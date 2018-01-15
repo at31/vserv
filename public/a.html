@@ -1,0 +1,1066 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+    <base href="https://www.vsopen.ru/app/" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <title>VSopen.ru :: Виртуальная школа</title>
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/css/iestyle.css?72" />
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/css/style.css?72"/>
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/css/pretty_table.css?72"/>
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/css/smartpaginator.css?72"/>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+
+    <!-- jquery -->
+    <script type="text/javascript" src="client/ru/vsopen/system/js/jquery-ui/js/jquery.min.js?72"></script>
+    <script type="text/javascript" src="client/ru/vsopen/system/js/jquery-ui/js/jquery-ui.min.js?72"></script>
+    <link rel="stylesheet" href="client/ru/vsopen/system/js/jquery-ui/css/jquery-ui.min.css?72"/>
+    <script type="text/javascript" src="client/ru/vsopen/system/js/globalvsopen.js?72"></script>
+    <script type="text/javascript" src="client/ru/vsopen/system/js/jquery-redirect/jquery.redirect.js?72"></script>
+
+    <!-- underscore -->
+    <script type="text/javascript" src="client/ru/vsopen/system/js/common/underscore-min.js?72"></script>
+
+    <!-- qtip tooltip-->
+    <script type="text/javascript" src="client/ru/vsopen/system/js/qtip/jquery.qtip.js?72"></script>
+    <link rel="stylesheet" type="text/css" href="client/ru/vsopen/system/js/qtip/jquery.qtip.css?72"/>
+
+    <!-- chosen -->
+    <script src="client/ru/vsopen/system/js/chosen/chosen.jquery.min.js?72" type="text/javascript"></script>
+    <script src="client/ru/vsopen/system/js/chosen/chosen.proto.min.js?72" type="text/javascript"></script>
+    <link rel="stylesheet" href="client/ru/vsopen/system/js/chosen/chosen.min.css?72"/>
+
+    <!--workAreaSelector-->
+    <link rel="stylesheet" href="client/ru/vsopen/common/workareas/css/main.css?72"/>
+    <link rel="stylesheet" href="client/ru/vsopen/common/workareas/css/cssf-base.css?72"/>
+    <script type="text/javascript" src="client/ru/vsopen/common/workareas/js/workAreaSelector.js?72"></script>
+
+    <link type="text/css" rel="Stylesheet" href="client/ru/vsopen/system/css/ie6FixSelect.css?72"/>
+</head>
+<body>
+    <iframe class="iframe-layer"></iframe>
+    <div id="main_header"></div>
+    <div id="main">
+        <div id="left">
+    <div id="wxm" class="widget normal menu" style="width: 80px; border: 1px solid lightgray;">
+        <div id="wxm_module" class="menu"></div>
+        <div class="header">
+            <div class="borders">
+                <div class="nw"></div>
+                <div class="ne"></div>
+            </div>
+            <div class="widget_header">
+            </div>
+            <div class="buttons">
+
+            </div>
+        </div>
+        <div class="content">
+            <div class="borders">
+                <div class="w"></div>
+                <div class="e"></div>
+            </div>
+            <div>
+                <img id="wxm_loader" src="images/ajax-loader.gif" alt="Загрузка"
+                     style="position:absolute; z-index:10; display:none;"/>
+                <img id="wxm_divloader" src="images/back1.png"
+                     style="position:absolute; z-index:20; display:none;"/>
+            </div>
+
+
+<link rel="stylesheet" type="text/css" href="client/ru/vsopen/base/menu/css/style.css?72"/>
+
+<div class="left_menu">
+        <a href="add/schedulingLesson" onClick="oneExec(this);" title="Учебное расписание" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/scheduling/schedulingLesson/images/icon.gif" alt="Учебное расписание"/>
+        </a>
+        <a href="add/eduplans" onClick="oneExec(this);" title="Учебные планы" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/eduplans/images/icon.gif" alt="Учебные планы"/>
+        </a>
+</div>
+<div class="left_menu">
+        <a href="add/thematicplans" onClick="oneExec(this);" title="Тематическое планирование" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/thematicplans/images/icon.gif" alt="Тематическое планирование"/>
+        </a>
+</div>
+<div class="left_menu">
+        <a href="add/messaging" onClick="oneExec(this);" title="Внутренняя почта" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/common/service/messaging/images/icon.gif" alt="Внутренняя почта"/>
+        </a>
+</div>
+<div class="left_menu">
+        <a href="add/studentDiary" onClick="oneExec(this);" title="Дневник" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/xreports/studentDiary/images/icon.gif" alt="Дневник"/>
+        </a>
+        <a href="add/studentportfolio" onClick="oneExec(this);" title="Портфолио ученика" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/students/portfolio/images/icon.gif" alt="Портфолио ученика"/>
+        </a>
+        <a href="add/studentReport" onClick="oneExec(this);" title="Табель успеваемости" class="tdn">
+            <img width="32" height="32" src="client/ru/vsopen/edu/xreports/studentReport/images/icon.gif" alt="Табель успеваемости"/>
+        </a>
+</div>
+        </div>
+        <div class="footer">
+<div class="borders">
+    <div class="sw"></div>
+    <div class="se"></div>
+    <div class="s"></div>
+</div>
+<!--в данных инпутах содержится информация для подтверждений-->
+<input value="menu" type="hidden" id="wxm_widgetName"/>
+
+
+        </div>
+    </div>
+        </div>
+        <div id="minblocks"></div>
+        <div id="normalblocks">
+    <div id="wx0" class="widget normal studentDiary" style="width: 1024px; border: 1px solid lightgray;">
+        <div id="wx0_module" class="studentDiary"></div>
+        <div class="header">
+            <div class="borders">
+                <div class="nw"></div>
+                <div class="ne"></div>
+            </div>
+            <div class="widget_header">
+                    <h2>Дневник ученика Тимоновский Н.А.</h2>
+            </div>
+            <div class="buttons">
+        <div class="button-border"></div>
+        <a href="javascript:void(0);" onclick="removeWidget('wx0');" class="close"
+           title="Закрыть">
+            <img src="images/invisible.png" height="32" width="31" alt="Закрыть"/>
+        </a>
+
+        <a onclick="toggleWorkAreaSelector('wx0'); $(this).toggleClass('up').toggleClass('down'); return false;"
+           title="Выбор рабочей области" class="down"></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="borders">
+                <div class="w"></div>
+                <div class="e"></div>
+            </div>
+            <div>
+                <img id="wx0_loader" src="images/ajax-loader.gif" alt="Загрузка"
+                     style="position:absolute; z-index:10; display:none;"/>
+                <img id="wx0_divloader" src="images/back1.png"
+                     style="position:absolute; z-index:20; display:none;"/>
+            </div>
+        <div class="slider">
+            <div class="content hidden">
+<script type="text/javascript" src="client/ru/vsopen/common/selectors/childselector/js/childSelector.js?72"></script>
+
+            </div>
+        </div>
+        <div class="current mb10">
+            Учебный год 2017-2018
+        </div>
+
+    <div class="ierpanel">
+
+    </div>
+
+
+<script type="text/javascript" src="client/ru/vsopen/edu/xreports/studentDiary/js/diary.js?72"></script>
+<script type="text/javascript" src="client/ru/vsopen/edu/xreports/studentDiary/js/window.js?72"></script>
+<script type="text/javascript" src="client/ru/vsopen/edu/xreports/studentDiary/js/soy/studentDiary.js?72"></script>
+
+<link rel="stylesheet" href="client/ru/vsopen/edu/xreports/studentJournal/css/journal.css?72" />
+<link rel="stylesheet" href="client/ru/vsopen/edu/xreports/studentDiary/css/diary.css?72" />
+<link rel="stylesheet" href="client/ru/vsopen/edu/eduplans/eduplancoursetemplate/css/main.css?72" />
+<link rel="stylesheet" href="client/ru/vsopen/edu/xreports/studentJournal/css/modal.css?72" />
+<link rel="stylesheet" href="client/ru/vsopen/base/start/css/main.css?72" />
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            initStudentDiary('wx0', '2017-09-01', '2018-08-31');
+        });
+    </script>
+
+    <div class="b-diary__top-comment clearfix">
+        <div class="fl">
+                <a href="javascript:void(0);"
+                   onclick="changeDiaryDate('wx0', 'studentDiary', '1256986', '27.11.2017');">Назад</a>
+        </div>
+        <div class="fr">
+                <a href="javascript:void(0);"
+                   onclick="changeDiaryDate('wx0', 'studentDiary', '1256986', '11.12.2017');">Вперед</a>
+        </div>
+    </div>
+    <div class="full-width datepicker">
+        <span>Перейти к дате: </span>
+        <input readonly id="wx0_date" class="vsopen-calendar-with-change"
+               onchange="changeDiaryCalendarDate('wx0', 'studentDiary', '1256986', this);"
+               value="04.12.2017">
+    </div>
+
+
+
+
+
+                <div class="full-width tac pb8">
+                </div>
+
+                <div class="b-diary__day-group clearfix">
+
+    <div class="b-diary__day-group__item">
+        <div class="b-diary__day-date">
+            <span style="font-weight: bold;">Понедельник (04.12.2017)</span>
+        </div>
+        <table class="diary-day">
+            <colgroup>
+                <col width="7%">
+                <col width="36%">
+                <col width="36%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th colspan="2">Домашнее задание</th>
+                    <th colspan="2">Оценка</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+
+
+
+
+    <tr>
+        <td class="diary-day__number">1</td>
+        <td class="diary-day__lessons diary-schedule">Литературное чтение</td>
+        <td class="diary-day__hw">Нет.</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating ">
+            <span class="mark diary-mark  good ">2</span>
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">2</td>
+        <td class="diary-day__lessons diary-schedule">Русский язык</td>
+        <td class="diary-day__hw">Нет.</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating exam"title="контрольная работа"
+            <span class="mark diary-mark ">4</span>
+            <br>
+        </td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">3</td>
+        <td class="diary-day__lessons diary-schedule">Математика</td>
+        <td class="diary-day__hw">Нет.</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+            <span class="mark diary-mark  good ">4</span>
+            <br>
+        </td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">4</td>
+        <td class="diary-day__lessons diary-schedule">Изобразительное искусство</td>
+        <td class="diary-day__hw">Придумать название города на сказочной планете.</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating exam"title="контрольная работа">
+            
+        </td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+    <tr>
+        <td class="diary-day__number">5</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+    <tr>
+        <td class="diary-day__number">6</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+    <tr>
+        <td class="diary-day__number">7</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="b-diary__day-group__item">
+        <div class="b-diary__day-date">
+            <span style="font-weight: bold;">Четверг (07.12.2017)</span>
+        </div>
+        <table class="diary-day">
+            <colgroup>
+                <col width="7%">
+                <col width="36%">
+                <col width="36%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th colspan="2">Домашнее задание</th>
+                    <th colspan="2">Оценка</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+
+
+
+
+    <tr>
+        <td class="diary-day__number">1</td>
+        <td class="diary-day__lessons diary-schedule">Литературное чтение</td>
+        <td class="diary-day__hw">Стр. 161 выучить или подготовить выразительное чтение.</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+            <span class="mark diary-mark  excellent ">5</span>
+            <br>
+        </td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">2</td>
+        <td class="diary-day__lessons diary-schedule">Окружающий мир</td>
+        <td class="diary-day__hw">.</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">3</td>
+        <td class="diary-day__lessons diary-schedule">Шахматы (Шахматы)</td>
+        <td class="diary-day__hw">Повторить ценность шахматных фигур.</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating ">
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">4</td>
+        <td class="diary-day__lessons diary-schedule">английский 2 (Иностранный язык)</td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating exam" title="контрольная работа">
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">5</td>
+        <td class="diary-day__lessons diary-schedule">Физическая культура</td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+    <tr>
+        <td class="diary-day__number">6</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+    <tr>
+        <td class="diary-day__number">7</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+            </tbody>
+        </table>
+    </div>
+
+                </div>
+                <div class="b-diary__day-group clearfix">
+
+    <div class="b-diary__day-group__item">
+        <div class="b-diary__day-date">
+            <span style="font-weight: bold;">Вторник (05.12.2017)</span>
+        </div>
+        <table class="diary-day">
+            <colgroup>
+                <col width="7%">
+                <col width="36%">
+                <col width="36%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th colspan="2">Домашнее задание</th>
+                    <th colspan="2">Оценка</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+
+
+
+
+    <tr>
+        <td class="diary-day__number">1</td>
+        <td class="diary-day__lessons diary-schedule">Окружающий мир</td>
+        <td class="diary-day__hw">Читать в учебнике, ч. 1, с.104 – 106. Подготовить сообщение "Почему наш город носит такое название?"</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating exam"title="контрольная работа(рубежная)"
+            <span class="mark diary-mark b">5</span>
+            <br>
+        </td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">2</td>
+        <td class="diary-day__lessons diary-schedule">Русский язык</td>
+        <td class="diary-day__hw">Стр. 133 упр.2, выучить правила на стр. 132,133.</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">3</td>
+        <td class="diary-day__lessons diary-schedule">английский 2 (Иностранный язык)</td>
+        <td class="diary-day__hw">выучить цифры 1-10 (для диктанта)</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+            <span class="mark diary-mark  excellent ">5</span>
+            <br>
+        </td>
+        <td class="diary-day__comment">
+                <i title="5: диктант (цифры);"
+                   class="comment icon-comment">
+                </i>
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">4</td>
+        <td class="diary-day__lessons diary-schedule">Математика</td>
+        <td class="diary-day__hw">Стр. 109 задача 10, учить таблицу умножения на 3.</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">5</td>
+        <td class="diary-day__lessons diary-schedule">Физическая культура</td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+    <tr>
+        <td class="diary-day__number">6</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+    <tr>
+        <td class="diary-day__number">7</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="b-diary__day-group__item">
+        <div class="b-diary__day-date">
+            <span style="font-weight: bold;">Пятница (08.12.2017)</span>
+        </div>
+        <table class="diary-day">
+            <colgroup>
+                <col width="7%">
+                <col width="36%">
+                <col width="36%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th colspan="2">Домашнее задание</th>
+                    <th colspan="2">Оценка</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+
+
+
+
+    <tr>
+        <td class="diary-day__number">1</td>
+        <td class="diary-day__lessons diary-schedule">Математика</td>
+        <td class="diary-day__hw">Стр. 112 № 28, № 32 выполнить 2 столбика примеров по выбору.</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">2</td>
+        <td class="diary-day__lessons diary-schedule">Физическая культура</td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">3</td>
+        <td class="diary-day__lessons diary-schedule">Русский язык</td>
+        <td class="diary-day__hw">.</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">4</td>
+        <td class="diary-day__lessons diary-schedule">Литературное чтение</td>
+        <td class="diary-day__hw">Подготовить выразительное чтение стр. 162-163, повторить произведения рубрики "Снежок порхает, кружится".</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating exam"title="контрольная работа(рубежная)"
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+    <tr>
+        <td class="diary-day__number">5</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+    <tr>
+        <td class="diary-day__number">6</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+    <tr>
+        <td class="diary-day__number">7</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+            </tbody>
+        </table>
+    </div>
+
+                </div>
+                <div class="b-diary__day-group clearfix">
+
+    <div class="b-diary__day-group__item">
+        <div class="b-diary__day-date">
+            <span style="font-weight: bold;">Среда (06.12.2017)</span>
+        </div>
+        <table class="diary-day">
+            <colgroup>
+                <col width="7%">
+                <col width="36%">
+                <col width="36%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th colspan="2">Домашнее задание</th>
+                    <th colspan="2">Оценка</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+
+
+
+
+    <tr>
+        <td class="diary-day__number">1</td>
+        <td class="diary-day__lessons diary-schedule">Литературное чтение</td>
+        <td class="diary-day__hw">Хр. ч. 1 стр. 28, читать 1 и 2 часть, подготовить пересказ.</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">2</td>
+        <td class="diary-day__lessons diary-schedule">Русский язык</td>
+        <td class="diary-day__hw">Повторить правописание гласных, согласных в корне слова, непроизносимых согласных; правописание суффиксов -ик, -ек, -онок, -ёнок, -ость.</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating exam"title="контрольная работа(рубежная)"
+            <span class="mark diary-mark ">4/4</span>
+            <br>
+        </td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">3</td>
+        <td class="diary-day__lessons diary-schedule">Математика</td>
+        <td class="diary-day__hw">.</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">4</td>
+        <td class="diary-day__lessons diary-schedule">Технология</td>
+        <td class="diary-day__hw">Доделать аппликацию "Берёза".</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+            <span class="mark diary-mark  excellent ">5</span>
+            <br>
+        </td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td class="diary-day__number">5</td>
+        <td class="diary-day__lessons diary-schedule">Музыка</td>
+        <td class="diary-day__hw">прочитать учебный материал на стр 46-47</td>
+        <td class="diary-day__file">
+        </td>
+        <td class="diary-day__rating "
+</td>
+        <td class="diary-day__comment">
+        </td>
+    </tr>
+
+
+    <tr>
+        <td class="diary-day__number">6</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+    <tr>
+        <td class="diary-day__number">7</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="b-diary__day-group__item">
+        <div class="b-diary__day-date">
+            <span style="font-weight: bold;">Суббота (09.12.2017)</span>
+        </div>
+        <table class="diary-day">
+            <colgroup>
+                <col width="7%">
+                <col width="36%">
+                <col width="36%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th colspan="2">Домашнее задание</th>
+                    <th colspan="2">Оценка</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+
+
+
+    <tr>
+        <td class="diary-day__number">1</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+    <tr>
+        <td class="diary-day__number">2</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+    <tr>
+        <td class="diary-day__number">3</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+    <tr>
+        <td class="diary-day__number">4</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+    <tr>
+        <td class="diary-day__number">5</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+    <tr>
+        <td class="diary-day__number">6</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+    <tr>
+        <td class="diary-day__number">7</td>
+        <td class="diary-day__lessons"></td>
+        <td class="diary-day__hw"></td>
+        <td class="diary-day__file"></td>
+        <td class="diary-day__rating"></td>
+        <td class="diary-day__comment"></td>
+    </tr>
+            </tbody>
+        </table>
+    </div>
+
+                </div>
+
+
+    <div class="grayRemark">
+        
+    </div>
+
+
+    <div class="b-diary__top-comment clearfix">
+        <div class="fl">
+                <a href="javascript:void(0);"
+                   onclick="changeDiaryDate('wx0', 'studentDiary', '1256986', '27.11.2017');">Назад</a>
+        </div>
+        <div class="fr">
+                <a href="javascript:void(0);"
+                   onclick="changeDiaryDate('wx0', 'studentDiary', '1256986', '11.12.2017');">Вперед</a>
+        </div>
+    </div>
+
+    <div id='wx0_diary_dialog'>
+        <div class="modal_content"></div>
+    </div>
+
+
+        </div>
+        <div class="footer">
+<div class="borders">
+    <div class="sw"></div>
+    <div class="se"></div>
+    <div class="s"></div>
+</div>
+<!--в данных инпутах содержится информация для подтверждений-->
+<input value="studentDiary" type="hidden" id="wx0_widgetName"/>
+
+
+        </div>
+    </div>
+        </div>
+        <div id="header">
+            <a href="">
+                <img src="images/logo.gif" alt="Виртуальная школа"
+                     style="position: absolute"/>
+            </a>
+            <div id="sidebarblock">
+
+
+<script type="text/javascript" src="client/ru/vsopen/base/sideBar/js/main.js?72"></script>
+<link rel="stylesheet" type="text/css" href="client/ru/vsopen/base/sideBar/css/style.css?72"/>
+
+<div class="top_menu">
+    <ul>
+        <li class="menu_li" onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+            <div class="tmr">
+                <a href="add/start">Начать работу</a>
+            </div>
+        </li>
+            <li class="menu_li" onmouseover="getSubTopMenu(this);" onmouseout="hideSubTopMenu(this);">
+                <div class="tmr">
+                    <span>Классы</span>
+                </div>
+                <div class="sub hid">
+                    <div class="cont">
+                        <ul>
+                                <li onClick="locationSchool('add/schedulingLesson');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Учебное расписание</span>
+                                </li>
+                                <li onClick="locationSchool('add/eduplans');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Учебные планы</span>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="menu_li" onmouseover="getSubTopMenu(this);" onmouseout="hideSubTopMenu(this);">
+                <div class="tmr">
+                    <span>Образовательный процесс</span>
+                </div>
+                <div class="sub hid">
+                    <div class="cont">
+                        <ul>
+                                <li onClick="locationSchool('add/thematicplans');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Тематическое планирование</span>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="menu_li" onmouseover="getSubTopMenu(this);" onmouseout="hideSubTopMenu(this);">
+                <div class="tmr">
+                    <span>Сервис</span>
+                </div>
+                <div class="sub hid">
+                    <div class="cont">
+                        <ul>
+                                <li onClick="locationSchool('add/messaging');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Внутренняя почта</span>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="menu_li" onmouseover="getSubTopMenu(this);" onmouseout="hideSubTopMenu(this);">
+                <div class="tmr">
+                    <span>Успеваемость</span>
+                </div>
+                <div class="sub hid">
+                    <div class="cont">
+                        <ul>
+                                <li onClick="locationSchool('add/studentDiary');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Дневник</span>
+                                </li>
+                                <li onClick="locationSchool('add/studentportfolio');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Портфолио ученика</span>
+                                </li>
+                                <li onClick="locationSchool('add/studentReport');"
+                                    onmouseover="$(this).addClass('sel');" onmouseout="$(this).removeClass('sel');">
+                                    <span>Табель успеваемости</span>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+    </ul>
+</div>
+            </div>
+            <div id="timer" class="timer">
+                20:13
+            </div>
+            <div class="session_dialog_window">
+                <div class="in">
+                    <div class="modal-header student__header clearfix">
+                        <span class="modal-title">Уважаемый пользователь!</span>
+                    </div>
+                    <div>
+                        <span>В целях безопасности сеанс работы завершен, т.к. длительное время вы не
+                            совершали никаких действий.
+                            Для продолжения работы введите, пожалуйста, заново ваши логин и пароль.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div id="right-panel">
+
+
+    <a href="add/persons" onClick="oneExec(this);" title="Личный кабинет">
+        <img src="client/ru/vsopen/business/persons/images/icon.gif" alt="Данные"/>
+    </a>
+    <a href="add/messaging" onClick="oneExec(this);" title="Внутренняя почта" class="messaging">
+        0
+    </a>
+    <a href="login?logout=true" onClick="oneExec(this);" title="Выход">
+        <img src="images/icons/logout.gif" alt="Выход"/>
+    </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
