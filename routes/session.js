@@ -17,9 +17,21 @@ const session = function(s){
 		}, function (err, res, body) {
 			console.log('error:', err);
 			console.log('session ======= >>>> ', JSON.parse(res.body).session);
-			resolve(JSON.parse(res.body).session);
+			if(JSON.parse(res.body).session){
+				let ro = {
+					sessionID: s,
+					result: true
+				};
+				resolve(ro);
+			}else{
+				reject({session:false});
+			}
 		});
 	});
 };
+
+function sessionError(val){
+	this.value = val;
+}
 
 module.exports = session;

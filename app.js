@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var schedule = require('./routes/schedule');
+// var schedule = require('./routes/schedule');
 var timetable = require('./routes/timetable');
 var login = require('./routes/login');
 var app = express();
@@ -38,7 +38,7 @@ app.use(function (req,res,next) {
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/schedule', schedule);
+// app.use('/schedule', schedule);
 app.use('/timetable', timetable);
 app.use('/login', login);
 

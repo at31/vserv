@@ -18,21 +18,21 @@ router.post('/t', function(req, res){
 		uri: 'https://www.vsopen.ru/app/ajaxjson/wx0/schedulingLesson/loadByClass?date=16.01.2018&template=111948',
 		method: 'GET'
 	}, function (err, __res, body) {
-    let jdata = JSON.parse(__res.body);
-    let dates = jdata.dates.map((d)=>{ return d});
-    dates.forEach((el)=>{
-      el.lessons = jdata.tables.filter((lssn)=>{return  lssn.dayNumber===el.weekday});
-      el.lessons.forEach((lssn)=>{
-        let arr = jdata.info.filter((inf)=>{return inf.call===lssn.id});
-        if(!!arr[0]){
-          lssn.info = arr[0];
-          console.log('lssn.id', lssn.id);
-          lssn.teacher = jdata.teachers[lssn.info.groupcourse];
-        }else if(!arr[0]){
-          lssn.info = 'empty'
-        }
-      });
-    });
+		let jdata = JSON.parse(__res.body);
+		let dates = jdata.dates.map((d)=>{ return d;});
+		dates.forEach((el)=>{
+			el.lessons = jdata.tables.filter((lssn)=>{return  lssn.dayNumber===el.weekday;});
+			el.lessons.forEach((lssn)=>{
+				let arr = jdata.info.filter((inf)=>{return inf.call===lssn.id;});
+				if(arr[0]){
+					lssn.info = arr[0];
+					console.log('lssn.id', lssn.id);
+					lssn.teacher = jdata.teachers[lssn.info.groupcourse];
+				}else if(!arr[0]){
+					lssn.info = 'empty';
+				}
+			});
+		});
 		res.json(dates);
 	});
 });
