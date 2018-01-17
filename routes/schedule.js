@@ -33,7 +33,7 @@ let getClassrooms = function(ro){
 			method: 'GET'
 		}, function (err, __res, body) {
 			console.log('err ', !!err);
-			if(!!err){
+			if(err){
 				console.log('error:', err);
 				reject({load_error: err});
 			}else {
@@ -83,7 +83,7 @@ let getSceduleData = function(ro){
 			uri: `https://www.vsopen.ru/app/ajaxjson/${ro.wid}/schedulingLesson/loadByClass?date=${ro.date}&template=${ro.template}`,
 			method: 'GET'
 		}, function (err, __res, body) {
-			if(!!err){
+			if(err){
 				reject({load_error: err});
 				console.log('load_error ', err);
 			}else{
@@ -109,6 +109,8 @@ let getSceduleData = function(ro){
 };
 
 let closeSchedulingLesson = function(ro) {
+	console.log('ro.wid ', ro.wid);
+	console.log('wid url ', `https://www.vsopen.ru/app/ajaxjson/remove/${ro.wid}`);
 	return new Promise((resolve,reject)=>{
 		request({
 			headers: {
@@ -122,15 +124,16 @@ let closeSchedulingLesson = function(ro) {
 			uri: `https://www.vsopen.ru/app/ajaxjson/remove/${ro.wid}`,
 			method: 'GET'
 		}, function (err, __res, body) {
-			if(!!err){
+			if(err){
 				reject({load_error: err});
 				console.log('load_error ', err);
 			}else{
-				resolve({sessionID: ro.sessionID, data: ro.data});
+				delete ro.wid;
+				resolve(ro);
 			}
 		});
 	});
-}
+};
 
 module.exports.getClassrooms = getClassrooms;
 module.exports.getSceduleData = getSceduleData;
