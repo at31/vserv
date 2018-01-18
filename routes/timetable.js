@@ -187,7 +187,7 @@ router.post('/',(req,res)=>{
 });
 
 router.post('/test',(req,res)=>{
-	let session  = 'JSESSIONID=803C79FD2AC87B1C93696DC700332AEE;';
+	let session  = 'JSESSIONID=B8ABB45177BD701E6E23138A074E4296;';
 	trySession(session)
 	// trySession('JSESSIONID=zzz;')
 		.then(schedule.getClassrooms)
@@ -276,13 +276,12 @@ let startDiary = function (ro) {
 					return a.indx-b.indx;
 				});
 				pdoc.pdata = pdata;
-				console.log('wid =================', wid);
 				pdoc.wid = wid;
-				/*
-				pdoc.pdata.forEach((el,indx)=>{
-					pdata.schedule = Object.assign({}, ro.data[indx]);
+
+				pdoc.pdata.forEach((el, indx)=>{
+					el.schedule = Object.assign({}, ro.data[indx]);
 				});
-				*/
+
 				// pdoc.schedule = ro.data;
 				pdoc.serverStatus = 'ok';
 				pdoc.session = ro.sessionID;

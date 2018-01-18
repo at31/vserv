@@ -33,18 +33,21 @@ let getClassrooms = function(ro){
 			method: 'GET'
 		}, function (err, __res, body) {
 			console.log('err ', !!err);
-			if(err){
+			if(!!err){
 				console.log('error:', err);
 				reject({load_error: err});
 			}else {
-				var pdoc = [];
+				// var pdoc = [];
+				var pdoc = {};
 				var $ = cheerio.load(__res.body,{decodeEntities: false,ignoreWhitespace: true});
 
 				$('select.roomselect option').each((indx, op)=>{
-					console.log($(op).attr('value'));
+					/*
 					let o={};
 					o[$(op).attr('value')] = $(op).text().trim();
 					pdoc.push(o);
+					*/
+					pdoc[$(op).attr('value')] = $(op).text().trim();
 				});
 				let wid = $('.schedulingLesson').attr('id');
 				let date = $('#' + wid + '_calendar').val();
@@ -95,7 +98,7 @@ let getSceduleData = function(ro){
 						let arr = jdata.info.filter((inf)=>{return inf.call===lssn.id;});
 						if(arr[0]){
 							lssn.info = arr[0];
-							console.log('lssn.id', lssn.id);
+							lssn.info.classroom = ro.data[lssn.info.room]; 
 							lssn.teacher = jdata.teachers[lssn.info.groupcourse];
 						}else if(!arr[0]){
 							lssn.info = 'empty';
