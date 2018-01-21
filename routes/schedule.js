@@ -92,13 +92,13 @@ let getSceduleData = function(ro){
 			}else{
 				let jdata = JSON.parse(__res.body);
 				let dates = jdata.dates.map((d)=>{ return d;});
-				dates.forEach((el)=>{
-					el.lessons = jdata.tables.filter((lssn)=>{return  lssn.dayNumber===el.weekday;});
+				dates.forEach((el, indx)=>{
+					el.lessons = jdata.tables.filter((lssn)=>{return  lssn.dayNumber===indx;});
 					el.lessons.forEach((lssn)=>{
 						let arr = jdata.info.filter((inf)=>{return inf.call===lssn.id;});
 						if(arr[0]){
 							lssn.info = arr[0];
-							lssn.info.classroom = ro.data[lssn.info.room]; 
+							lssn.info.classroom = ro.data[lssn.info.room];
 							lssn.teacher = jdata.teachers[lssn.info.groupcourse];
 						}else if(!arr[0]){
 							lssn.info = 'empty';

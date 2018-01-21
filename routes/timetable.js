@@ -187,7 +187,7 @@ router.post('/',(req,res)=>{
 });
 
 router.post('/test',(req,res)=>{
-	let session  = 'JSESSIONID=B8ABB45177BD701E6E23138A074E4296;';
+	let session  = req.body.sescookie;  //'JSESSIONID=E1B107C32177A69EA7FFF0F02C29E9A1;';
 	trySession(session)
 	// trySession('JSESSIONID=zzz;')
 		.then(schedule.getClassrooms)
