@@ -1,7 +1,7 @@
 const querystring = require('querystring');
 const request = require('request');
 
-const session = function(s){
+const session = function(s, _url){
 	return new Promise((resolve, reject)=>{
 		request({
 			headers: {
@@ -20,11 +20,13 @@ const session = function(s){
 			if(JSON.parse(res.body).session){
 				let ro = {
 					sessionID: s,
-					result: true
+					result: true,
+					url: _url,
+					error: false
 				};
 				resolve(ro);
 			}else{
-				reject({session:false});
+				reject({type: "session", val:false});
 			}
 		});
 	});

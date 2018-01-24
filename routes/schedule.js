@@ -63,7 +63,7 @@ let getClassrooms = function(ro){
 		    });
 		    */
 				console.log({sessionID: sessionID, data: pdoc, wid: wid, date: date, template: template});
-				resolve({sessionID: sessionID, data: pdoc, wid: wid, date: date, template: template});
+				resolve({sessionID: sessionID, data: pdoc, wid: wid, date: date, template: template, url: ro.url, error: false});
 			}
 		});
 	});
@@ -105,7 +105,7 @@ let getSceduleData = function(ro){
 						}
 					});
 				});
-				resolve({sessionID: ro.sessionID, data: dates, wid: ro.wid});
+				resolve({sessionID: ro.sessionID, data: dates, wid: ro.wid, url: ro.url, error: false});
 			}
 		});
 	});

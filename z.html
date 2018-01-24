@@ -113,8 +113,8 @@
         </div>
         <div id="minblocks"></div>
         <div id="normalblocks">
-    <div id="wx0" class="widget normal studentDiary" style="width: 1024px; border: 1px solid lightgray;">
-        <div id="wx0_module" class="studentDiary"></div>
+    <div id="wx1" class="widget normal studentDiary" style="width: 1024px; border: 1px solid lightgray;">
+        <div id="wx1_module" class="studentDiary"></div>
         <div class="header">
     <div class="borders">
         <div class="nw"></div>
@@ -125,12 +125,12 @@
             </div>
             <div class="buttons">
         <div class="button-border"></div>
-        <a href="javascript:void(0);" onclick="removeWidget('wx0');" class="close"
+        <a href="javascript:void(0);" onclick="removeWidget('wx1');" class="close"
            title="Закрыть">
             <img src="images/invisible.png" height="32" width="31" alt="Закрыть"/>
         </a>
 
-        <a onclick="toggleWorkAreaSelector('wx0'); $(this).toggleClass('up').toggleClass('down'); return false;"
+        <a onclick="toggleWorkAreaSelector('wx1'); $(this).toggleClass('up').toggleClass('down'); return false;"
            title="Выбор рабочей области" class="down"></a>
             </div>
         </div>
@@ -140,9 +140,9 @@
         <div class="e"></div>
     </div>
             <div>
-                <img id="wx0_loader" src="images/ajax-loader.gif" alt="Загрузка"
+                <img id="wx1_loader" src="images/ajax-loader.gif" alt="Загрузка"
                      style="position:absolute; z-index:10; display:none;"/>
-                <img id="wx0_divloader" src="images/back1.png"
+                <img id="wx1_divloader" src="images/back1.png"
                      style="position:absolute; z-index:20; display:none;"/>
             </div>
         <div class="slider">
@@ -175,25 +175,25 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            initStudentDiary('wx0', '2017-09-01', '2018-08-31');
+            initStudentDiary('wx1', '2017-09-01', '2018-08-31');
         });
     </script>
 
     <div class="b-diary__top-comment clearfix">
         <div class="fl">
                 <a href="javascript:void(0);"
-                   onclick="changeDiaryDate('wx0', 'studentDiary', '1256986', '08.01.2018');">Назад</a>
+                   onclick="changeDiaryDate('wx1', 'studentDiary', '1256986', '15.01.2018');">Назад</a>
         </div>
         <div class="fr">
                 <a href="javascript:void(0);"
-                   onclick="changeDiaryDate('wx0', 'studentDiary', '1256986', '22.01.2018');">Вперед</a>
+                   onclick="changeDiaryDate('wx1', 'studentDiary', '1256986', '29.01.2018');">Вперед</a>
         </div>
     </div>
     <div class="full-width datepicker">
         <span>Перейти к дате: </span>
-        <input id="wx0_date" class="vsopen-calendar"
-               onchange="changeDiaryCalendarDate('wx0', 'studentDiary', '1256986', this);"
-               value="15.01.2018">
+        <input id="wx1_date" class="vsopen-calendar"
+               onchange="changeDiaryCalendarDate('wx1', 'studentDiary', '1256986', this);"
+               value="22.01.2018">
     </div>
 
 
@@ -207,7 +207,7 @@
 
     <div class="b-diary__day-group__item">
         <div class="b-diary__day-date">
-            <span style="font-weight: bold;">Понедельник (15.01.2018)</span>
+            <span style="font-weight: bold;">Понедельник (22.01.2018)</span>
         </div>
         <table class="diary-day">
             <colgroup>
@@ -236,7 +236,7 @@
     <tr>
         <td class="diary-day__number">1</td>
         <td class="diary-day__lessons diary-schedule">Литературное чтение на родном языке</td>
-        <td class="diary-day__hw"></td>
+        <td class="diary-day__hw">Подготовить выразительное чтение произведения о Родине или о России.</td>
         <td class="diary-day__file">
         </td>
         <td class="diary-day__rating "
@@ -278,7 +278,7 @@
     <tr>
         <td class="diary-day__number">4</td>
         <td class="diary-day__lessons diary-schedule">Изобразительное искусство</td>
-        <td class="diary-day__hw">.</td>
+        <td class="diary-day__hw">Дорисовать снежинку.</td>
         <td class="diary-day__file">
         </td>
         <td class="diary-day__rating "
@@ -319,7 +319,7 @@
 
     <div class="b-diary__day-group__item">
         <div class="b-diary__day-date">
-            <span style="font-weight: bold;">Четверг (18.01.2018)</span>
+            <span style="font-weight: bold;">Четверг (25.01.2018)</span>
         </div>
         <table class="diary-day">
             <colgroup>
@@ -439,7 +439,7 @@
 
     <div class="b-diary__day-group__item">
         <div class="b-diary__day-date">
-            <span style="font-weight: bold;">Вторник (16.01.2018)</span>
+            <span style="font-weight: bold;">Вторник (23.01.2018)</span>
         </div>
         <table class="diary-day">
             <colgroup>
@@ -468,7 +468,7 @@
     <tr>
         <td class="diary-day__number">1</td>
         <td class="diary-day__lessons diary-schedule">Окружающий мир</td>
-        <td class="diary-day__hw"></td>
+        <td class="diary-day__hw">Читать в учебнике 152-156.</td>
         <td class="diary-day__file">
         </td>
         <td class="diary-day__rating "
@@ -496,7 +496,7 @@
     <tr>
         <td class="diary-day__number">3</td>
         <td class="diary-day__lessons diary-schedule">английский 2 (Иностранный язык)</td>
-        <td class="diary-day__hw">выполнить РТ с.34 упр.1,2, выписать новые слова в словарик (уч. с.62 упр.1)</td>
+        <td class="diary-day__hw">выучить слова (для диктанта) уч. с. 74 упр. 1 (1 столбик</td>
         <td class="diary-day__file">
         </td>
         <td class="diary-day__rating "
@@ -557,7 +557,7 @@
 
     <div class="b-diary__day-group__item">
         <div class="b-diary__day-date">
-            <span style="font-weight: bold;">Пятница (19.01.2018)</span>
+            <span style="font-weight: bold;">Пятница (26.01.2018)</span>
         </div>
         <table class="diary-day">
             <colgroup>
@@ -671,7 +671,7 @@
 
     <div class="b-diary__day-group__item">
         <div class="b-diary__day-date">
-            <span style="font-weight: bold;">Среда (17.01.2018)</span>
+            <span style="font-weight: bold;">Среда (24.01.2018)</span>
         </div>
         <table class="diary-day">
             <colgroup>
@@ -700,7 +700,7 @@
     <tr>
         <td class="diary-day__number">1</td>
         <td class="diary-day__lessons diary-schedule">Литературное чтение</td>
-        <td class="diary-day__hw"></td>
+        <td class="diary-day__hw">Подготовить выразительное чтение диалога героев сказки на стр. 32-33.</td>
         <td class="diary-day__file">
         </td>
         <td class="diary-day__rating "
@@ -742,7 +742,7 @@
     <tr>
         <td class="diary-day__number">4</td>
         <td class="diary-day__lessons diary-schedule">Технология</td>
-        <td class="diary-day__hw">Доделать работу.</td>
+        <td class="diary-day__hw"></td>
         <td class="diary-day__file">
         </td>
         <td class="diary-day__rating "
@@ -756,7 +756,7 @@
     <tr>
         <td class="diary-day__number">5</td>
         <td class="diary-day__lessons diary-schedule">Музыка</td>
-        <td class="diary-day__hw">выучить названия плясов</td>
+        <td class="diary-day__hw"></td>
         <td class="diary-day__file">
         </td>
         <td class="diary-day__rating "
@@ -789,7 +789,7 @@
 
     <div class="b-diary__day-group__item">
         <div class="b-diary__day-date">
-            <span style="font-weight: bold;">Суббота (20.01.2018)</span>
+            <span style="font-weight: bold;">Суббота (27.01.2018)</span>
         </div>
         <table class="diary-day">
             <colgroup>
@@ -885,15 +885,15 @@
     <div class="b-diary__top-comment clearfix">
         <div class="fl">
                 <a href="javascript:void(0);"
-                   onclick="changeDiaryDate('wx0', 'studentDiary', '1256986', '08.01.2018');">Назад</a>
+                   onclick="changeDiaryDate('wx1', 'studentDiary', '1256986', '15.01.2018');">Назад</a>
         </div>
         <div class="fr">
                 <a href="javascript:void(0);"
-                   onclick="changeDiaryDate('wx0', 'studentDiary', '1256986', '22.01.2018');">Вперед</a>
+                   onclick="changeDiaryDate('wx1', 'studentDiary', '1256986', '29.01.2018');">Вперед</a>
         </div>
     </div>
 
-    <div id='wx0_diary_dialog'>
+    <div id='wx1_diary_dialog'>
         <div class="modal_content"></div>
     </div>
 
@@ -906,7 +906,7 @@
         <div class="s"></div>
     </div>
 <!--в данных инпутах содержится информация для подтверждений-->
-<input value="studentDiary" type="hidden" id="wx0_widgetName"/>
+<input value="studentDiary" type="hidden" id="wx1_widgetName"/>
 
 
         </div>
