@@ -26,7 +26,7 @@ const session = function(s, _url){
 				};
 				resolve(ro);
 			}else{
-				reject({type: "session", val:false});
+				reject({type: 'session', val:false});
 			}
 		});
 	});

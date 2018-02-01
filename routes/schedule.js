@@ -33,7 +33,7 @@ let getClassrooms = function(ro){
 			method: 'GET'
 		}, function (err, __res, body) {
 			console.log('err ', !!err);
-			if(!!err){
+			if(err){
 				console.log('error:', err);
 				reject({load_error: err});
 			}else {

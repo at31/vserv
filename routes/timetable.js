@@ -6,7 +6,8 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const trySession = require('./session');
 const schedule = require('./schedule');
-
+const moment = require('moment');
+moment().format();
 //
 router.post('/start',(req, res)=>{
 	// trySession('27FE072E3AD85CB8E0DED694C7D9E320').then((session)=>{
@@ -208,7 +209,20 @@ router.post('/test',(req,res)=>{
 
 var _url = '';
 router.post('/test2', (req, res)=>{
-	res.json({"_url":_url})
+	let session  = req.body.sescookie;  //'JSESSIONID=E1B107C32177A69EA7FFF0F02C29E9A1;';
+	trySession(session,'')
+		.then(startDiaryN)
+		.then(getDiaryInitData)
+		.then(getDiaryJSON)
+		.then((val)=>{
+			res.json(val);
+		})
+		.catch((e)=>{
+			console.log('===================error================', e);
+			res.json({
+				'error_body': e, 'error': true
+			});
+		});
 });
 
 router.post('/test1',(req,res)=>{
@@ -234,6 +248,35 @@ router.post('/test1',(req,res)=>{
 			});
 		});
 });
+
+
+//start diary data function
+let startDiaryN = function (ro) {
+
+	return new Promise((resolve, reject)=>{
+		request({
+			headers: {
+				'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+				'Accept-Language': 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+				'Accept-Encoding': 'gzip, deflate, br',
+				'Referer': 'https://www.vsopen.ru/app/add/start',
+				'Cookie':ro.sessionID,
+				'Connection': 'keep-alive'
+			},
+			uri: 'https://www.vsopen.ru/app/add/studentDiary',
+			method: 'GET'
+		}, function (err, __res, body) {
+			if(err){
+				console.log('error:', err);
+				reject({load_error: 'load diary start data error', error: err});
+			}else{
+				ro.body = __res.body;
+				resolve(ro);
+			}
+		});
+	});
+};
+
 
 //start diary data function
 let startDiary = function (ro) {
@@ -262,7 +305,6 @@ let startDiary = function (ro) {
 	});
 };
 
-
 let getDiaryByDate = function (ro) {
 	console.log('================ _url ===============',ro.url);
 	return new Promise((resolve, reject)=>{
@@ -289,6 +331,87 @@ let getDiaryByDate = function (ro) {
 	});
 };
 
+function getDiaryInitData(ro){
+	return new Promise((resolve, reject)=>{
+		let pdoc = {};
+		let pdate = [];
+
+		/*
+        DIARY.init({
+            baseUrl: 'api/1',
+            prefix: 'wx1',
+            widget: 'studentDiary',
+            date: 1517513815257,
+            eduYearId: 1171835,
+            personId: 1111111
+        });
+    парсим нечто такое, можно сложный regexp без вереницы const,
+		но нет гарантии что это неизменный объект...
+		*/
+		const rgxpwx = /prefix: '([a-z0-9]+)'/i;
+		const rgxpperson = /personId: (\d+)/i;
+		const rgxpbaseUrl = /baseUrl: '([/a-z0-9]+)'/i;
+		const rgxpdate = /date: (\d+)/i;
+		const rgxpeduYearId = /eduYearId: (\d+)/i;
+		const rgxpwidget = /widget: '([a-zA-Z0-9]+)'/i;
+		const $ = cheerio.load(ro.body, {decodeEntities: false, ignoreWhitespace: true});
+
+		let htmlstr = $('script').filter((i, el)=>{
+			let r = false;
+			if($(el).attr('type')==='text/javascript' && $(el).attr('src')===undefined){
+				if($(el).html().includes('DIARY.init')){
+					r = true;
+				}
+			}
+			return r;
+		}).html();
+		console.log('htmlstr', htmlstr);
+		pdoc.wid= htmlstr.match(rgxpwx)[1];
+		pdoc.studentID = htmlstr.match(rgxpperson)[1];
+		pdoc.baseUrl = htmlstr.match(rgxpbaseUrl)[1];
+		//а фиг его знает зачем мне это
+		pdoc.date = htmlstr.match(rgxpdate)[1];
+		//это нужно для запроса
+		pdoc.eduYearId = htmlstr.match(rgxpeduYearId)[1];
+		// ?
+		pdoc.widget = htmlstr.match(rgxpwidget)[1];
+
+		console.log(pdoc);
+		ro.pdoc = pdoc;
+		resolve(ro);
+	});
+}
+
+function getDiaryJSON(ro){
+	const mdate = moment.unix(ro.pdoc.date/1000);
+	const startDate = mdate.startOf('week').toDate().getTime();
+	const stopDate = mdate.endOf('week').subtract(1, 'days').toDate().getTime();
+	const url = `https://www.vsopen.ru/app/api/1/persons/${ro.pdoc.studentID}/lessons?startDate=${startDate}&stopDate=${stopDate}&eduYearId=${ro.pdoc.eduYearId}`;
+	ro = {...ro, mdate, startDate, stopDate}
+	return new Promise((resolve,reject)=>{
+		request({
+			headers: {
+				'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+				'Accept-Language': 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+				'Accept-Encoding': 'gzip, deflate, br',
+				'Referer': 'https://www.vsopen.ru/app/add/start',
+				'Cookie':ro.sessionID,
+				'Connection': 'keep-alive'
+			},
+			uri: url,
+			method: 'GET'
+		}, function (err, __res, body) {
+			if(err){
+				console.log('error:', err);
+				reject({load_error: 'load json diary start data error', error: err});
+			}else{
+				ro.body = __res.body;
+				resolve(ro);
+			}
+		});
+
+	});
+}
 
 function parseDiaryHTML(__res, ro){
 	let pdoc={};
@@ -296,19 +419,33 @@ function parseDiaryHTML(__res, ro){
 
 	const $ = cheerio.load(__res.body,{decodeEntities: false,ignoreWhitespace: true});
 
+	let js = $('script');
+	js.each((i, el)=>{
+		const regexp = /personId: (\d+)/i;
+		console.log(`=============== js element - ${i}===========`);
+		console.log($(el).attr('type'));
+		console.log($(el).attr('src'));
+		if($(el).attr('type')==='text/javascript' && $(el).attr('src')===undefined){
+			let htmlstr = $(el).html();
+			let ma = htmlstr.match(regexp);
+			console.log(ma[1]);
+		}
+		console.log(`=============== END - ${i}===========`);
+	});
+
 	let wid = $('.studentDiary').attr('id');
 	console.log('wd ', wid);
-	pdoc.studentFIO=$('#'+wid+">div.header").find($('div.widget_header')).find($('h2')).text().trim();
-	pdoc.currentYear=$('#'+wid+">div.content").children('div.current').text().trim();
-	var pd = $('#'+wid+">div.content").find($('.b-diary__top-comment>div.fl')).find('a').attr('onclick').split(', ');
+	pdoc.studentFIO=$('#'+wid+'>div.header').find($('div.widget_header')).find($('h2')).text().trim();
+	pdoc.currentYear=$('#'+wid+'>div.content').children('div.current').text().trim();
+	// var pd = $('#'+wid+'>div.content').find($('.b-diary__top-comment>div.fl')).find('a').attr('onclick').split(', ');
 
-	pdoc.prevDateLink=pd[3].replace(');','');
-	pdoc.studentID = pd[2];
+	// pdoc.prevDateLink=pd[3].replace(');','');
+	pdoc.studentID = 1256986; // pd[2];
 
-	var nd = $('#'+wid+">div.content").find($('.b-diary__top-comment>div.fr')).find('a').attr('onclick').split(', ');
-	pdoc.nextDateLink=nd[3].replace(');','');
+	// var nd = $('#'+wid+'>div.content').find($('.b-diary__top-comment>div.fr')).find('a').attr('onclick').split(', ');
+	// pdoc.nextDateLink=nd[3].replace(');','');
 
-	var diary = $('#'+wid+">div.content").find($('.b-diary__day-group__item'));
+	var diary = $('#'+wid+'>div.content').find($('.b-diary__day-group__item'));
 	diary.each((i, el)=>{
 		let day = {};
 		day.title = $(el).find('div.b-diary__day-date>span').text();
