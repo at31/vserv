@@ -28,7 +28,6 @@ const session = function(s, ro){
 					error: false
 				};
 	*/
-				console.log('session _ro', _ro);
 				resolve(_ro);
 			}else{
 				reject({type: 'session', val:false});
