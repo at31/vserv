@@ -10,6 +10,7 @@ var users = require('./routes/users');
 // var schedule = require('./routes/schedule');
 var timetable = require('./routes/timetable');
 var login = require('./routes/login');
+var wmongo = require('./routes/wmongodb');
 
 
 
@@ -44,6 +45,7 @@ app.use('/users', users);
 // app.use('/schedule', schedule);
 app.use('/timetable', timetable);
 app.use('/login', login);
+app.use('/tbot', wmongo);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

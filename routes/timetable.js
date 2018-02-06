@@ -6,6 +6,7 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const trySession = require('./session');
 const schedule = require('./schedule');
+const mongoHelper = require('./mongoHelper');
 const moment = require('moment');
 moment().format();
 moment.locale('ru');
@@ -17,6 +18,8 @@ router.post('/test2', (req, res)=>{
 		.then(getDiaryInitData)
 		.then(getDiaryJSON)
 		.then(schedule.closeSchedulingLesson)
+		.then(mongoHelper.deleteDocMongoDB)
+		.then(mongoHelper.saveDocMongoDB)
 		.then((val)=>{
 			res.json(val);
 		})
@@ -39,6 +42,8 @@ router.post('/test2date', (req, res)=>{
 	trySession(session, ro)
 		.then(getDiaryJSON)
 		.then(schedule.closeSchedulingLesson)
+		.then(mongoHelper.deleteDocMongoDB)
+		.then(mongoHelper.saveDocMongoDB)
 		.then((val)=>{
 			res.json(val);
 		})
@@ -162,7 +167,9 @@ function getDiaryJSON(ro){
 					let dayName = moment.unix(el/1000).format('dddd (DD.MM.YYYY)');
 					dayName = dayName[0].toUpperCase() + dayName.slice(1);
 					result.push({
+						id: el,
 						title: dayName,
+						tbotlink: `https://t.me/VCLI_BOT?start=start-${ro.studentID}-${el}`,
 						data: oresbody.entities.filter(lesson=>{return  (lesson.startDate>el && lesson.startDate<nextUnixDay); }) });
 				});
 				const _ro = Object.assign({}, ro);

@@ -1,5 +1,6 @@
 const querystring = require('querystring');
 const request = require('request');
+const mongoHelper = require('./mongoHelper');
 
 const session = function(s, ro){
 	console.log(s);
@@ -29,7 +30,7 @@ const session = function(s, ro){
 				};
 	*/
 				resolve(_ro);
-			}else{
+			}else{				
 				reject({type: 'session', val:false});
 			}
 		});
