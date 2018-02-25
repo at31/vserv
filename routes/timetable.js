@@ -12,6 +12,7 @@ moment().format();
 moment.locale('ru');
 
 router.post('/test2', (req, res)=>{
+	console.log(`${new Date()} :::: ${req.ip} ::: watch the diary`);
 	let session  = req.body.sescookie;  //'JSESSIONID=E1B107C32177A69EA7FFF0F02C29E9A1;';
 	trySession(session,'')
 		.then(startDiaryN)
@@ -31,6 +32,7 @@ router.post('/test2', (req, res)=>{
 		});
 });
 router.post('/test2date', (req, res)=>{
+	console.log(`${new Date()} :::: ${req.ip} ::: watch the next week diary`);
 	let session  = req.body.sescookie;  //'JSESSIONID=E1B107C32177A69EA7FFF0F02C29E9A1;';
 	let ro = {
 		date: req.body.date,

@@ -8,7 +8,7 @@ const url = 'mongodb://localhost:27017';
 const dbName = 'tbot';
 
 let saveDocMongoDB = function(ro) {
-	let doc = {studentID: ro.studentID, pdata: ro.pdata};
+	let doc = {studentID: ro.studentID, pdata: ro.pdata, chatID: '', username: ''};
 	return new Promise((resolve, reject)=>{
 		MongoClient.connect(url, function (err, client) {
 			if(err===null){

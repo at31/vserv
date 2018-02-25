@@ -6,15 +6,15 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 
 let JSESSIONID='';
-var form = {
-	login: 'Timonovs2008',
-	password: 'nTimonovs19',
-	submit: '%D0%92%D0%BE%D0%B9%D1%82%D0%B8'
-};
+
 
 router.post('/', function(req,res){
-	form.login=req.body.login;
-	form.password=req.body.password;
+	// form.login=req.body.login;
+	// form.password=req.body.password;
+	console.log(`${new Date()} :::: ${req.ip} ::: has logged in`);
+	let form ={};
+	form.login='Timonovs2008';
+	form.password='nTimonovs19';
 	var formData = querystring.stringify(form);
 	var contentLength = formData.length;
 	request({
